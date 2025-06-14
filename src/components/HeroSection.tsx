@@ -21,6 +21,10 @@ const HeroSection = () => {
         <div className="dot dot-6"></div>
         <div className="dot dot-7"></div>
         <div className="dot dot-8"></div>
+        <div className="dot dot-9"></div>
+        <div className="dot dot-10"></div>
+        <div className="dot dot-11"></div>
+        <div className="dot dot-12"></div>
       </div>
       
       <div className="max-w-6xl mx-auto w-full">
@@ -94,7 +98,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
               <img 
-                src="/placeholder.svg" 
+                src="/lovable-uploads/3c0701ae-6cbd-43ae-b8d3-a7eb591aea64.png" 
                 alt="Sai Iyer - Product Manager"
                 className="relative w-full h-full object-cover rounded-3xl border-4 border-white shadow-2xl"
               />

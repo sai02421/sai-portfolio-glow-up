@@ -1,31 +1,28 @@
 
-import { ExternalLink, Clock, Users } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const LatestWritingSection = () => {
   const articles = [
     {
       title: "Same UPI. Different UX.",
       description: "Why GPay feels effortless for P2P and PhonePe dominates for P2M. A UX breakdown of intent vs interface.",
-      readTime: "5 min read",
-      engagement: "127 likes",
       link: "https://www.linkedin.com/posts/sai-iyer-gpay-vs-phonepe-post-link",
-      tags: ["UX Analysis", "FinTech"]
+      tags: ["UX Analysis", "FinTech"],
+      emoji: "💳"
     },
     {
       title: "Lean-back vs Lean-in.",
       description: "Netflix plays to emotion, Prime plays to control. A UX teardown on how small decisions create binge-worthy experiences.",
-      readTime: "7 min read",
-      engagement: "89 likes",
       link: "https://www.linkedin.com/posts/sai-iyer-netflix-vs-prime-video-post-link",
-      tags: ["UX Design", "Streaming"]
+      tags: ["UX Design", "Streaming"],
+      emoji: "📺"
     },
     {
       title: "Still going after 384 days.",
       description: "How Duolingo designs for forgiveness, progress, and behavior — not pressure. A breakdown of habit-safe UX.",
-      readTime: "6 min read",
-      engagement: "156 likes",
       link: "https://www.linkedin.com/posts/sai-iyer-duolingo-ux-post-link",
-      tags: ["UX Psychology", "EdTech"]
+      tags: ["UX Psychology", "EdTech"],
+      emoji: "🦉"
     }
   ];
 
@@ -54,8 +51,12 @@ const LatestWritingSection = () => {
               href={article.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="section-card p-8 hover:scale-105 transition-all duration-300 cursor-pointer block group"
+              className="section-card p-8 hover:scale-105 transition-all duration-300 cursor-pointer block group relative"
             >
+              <div className="absolute top-6 right-6 text-2xl">
+                {article.emoji}
+              </div>
+              
               <div className="flex flex-wrap gap-2 mb-4">
                 {article.tags.map((tag, tagIndex) => (
                   <span 
@@ -67,24 +68,13 @@ const LatestWritingSection = () => {
                 ))}
               </div>
               
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 group-hover:text-purple-600 transition-colors">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 group-hover:text-purple-600 transition-colors pr-8">
                 {article.title}
               </h3>
               
               <p className="mb-6 leading-relaxed text-gray-600">
                 {article.description}
               </p>
-              
-              <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                <div className="flex items-center gap-1">
-                  <Clock size={14} />
-                  <span>{article.readTime}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Users size={14} />
-                  <span>{article.engagement}</span>
-                </div>
-              </div>
               
               <div className="inline-flex items-center gap-2 text-purple-600 font-medium hover:text-purple-700 transition-colors">
                 Read on LinkedIn
