@@ -7,16 +7,16 @@ const HeroSection = () => {
     <section className="min-h-[90vh] flex flex-col justify-center section-container animate-fade-in">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="order-2 md:order-1">
-          <h1 className="text-4xl md:text-6xl font-bold mb-3" style={{ color: '#E2E8F0' }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-3" style={{ color: '#D4C5B0' }}>
             Sai Iyer
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold mb-2" style={{ color: '#94A3B8' }}>
+          <h2 className="text-xl md:text-2xl font-semibold mb-2" style={{ color: '#9E9E9E' }}>
             Product Manager
           </h2>
-          <p className="text-lg md:text-xl mb-4" style={{ color: '#94A3B8' }}>
+          <p className="text-lg md:text-xl mb-4" style={{ color: '#9E9E9E' }}>
             Building Products with Empathy and Impact
           </p>
-          <p className="text-base md:text-lg mb-6" style={{ color: '#94A3B8' }}>
+          <p className="text-base md:text-lg mb-6" style={{ color: '#9E9E9E' }}>
             Based in Gujarat, India
           </p>
           
@@ -25,8 +25,8 @@ const HeroSection = () => {
               variant="outline" 
               className="gap-2 border-2" 
               style={{ 
-                borderColor: '#22D3EE', 
-                color: '#22D3EE',
+                borderColor: '#BFA181', 
+                color: '#BFA181',
                 backgroundColor: 'transparent'
               }}
             >
@@ -37,8 +37,8 @@ const HeroSection = () => {
               variant="outline" 
               className="gap-2 border-2" 
               style={{ 
-                borderColor: '#22D3EE', 
-                color: '#22D3EE',
+                borderColor: '#BFA181', 
+                color: '#BFA181',
                 backgroundColor: 'transparent'
               }}
             >
@@ -48,8 +48,8 @@ const HeroSection = () => {
             <Button 
               className="gap-2 hover:opacity-90 transition-opacity" 
               style={{ 
-                backgroundColor: '#22D3EE', 
-                color: '#0F172A' 
+                backgroundColor: '#BFA181', 
+                color: '#1C1C1C' 
               }}
             >
               <Download size={18} />
@@ -61,7 +61,7 @@ const HeroSection = () => {
         <div className="order-1 md:order-2 flex justify-center">
           <div 
             className="relative w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 glow"
-            style={{ borderColor: '#22D3EE' }}
+            style={{ borderColor: '#BFA181' }}
           >
             <img 
               src="/placeholder.svg" 

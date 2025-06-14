@@ -1,3 +1,4 @@
+
 import { 
   User, Code, Database, Calendar, Users, Tag
 } from "lucide-react";
@@ -17,16 +18,16 @@ const CompetencyCard = ({
         <div 
           className="mb-4 p-3 rounded-full"
           style={{ 
-            backgroundColor: 'rgba(34, 211, 238, 0.1)',
-            color: '#22D3EE'
+            backgroundColor: 'rgba(191, 161, 129, 0.1)',
+            color: '#BFA181'
           }}
         >
           <Icon size={24} />
         </div>
-        <h3 className="text-xl font-semibold mb-2 text-center md:text-left" style={{ color: '#E2E8F0' }}>
+        <h3 className="text-xl font-semibold mb-2 text-center md:text-left" style={{ color: '#D4C5B0' }}>
           {title}
         </h3>
-        <p className="text-center md:text-left" style={{ color: '#94A3B8' }}>
+        <p className="text-center md:text-left" style={{ color: '#9E9E9E' }}>
           {description}
         </p>
       </div>

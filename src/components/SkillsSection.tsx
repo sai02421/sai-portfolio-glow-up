@@ -1,3 +1,4 @@
+
 const SkillsSection = () => {
   const skillCategories = [
     {
@@ -19,7 +20,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="section-container bg-navy-dark animate-fade-in">
+    <section id="skills" className="section-container bg-soft-black animate-fade-in">
       <h2 className="section-title text-center">Skills & Tools</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -27,7 +28,7 @@ const SkillsSection = () => {
           <div key={index} className="gradient-card p-6">
             <h3 
               className="text-xl font-semibold mb-4" 
-              style={{ color: '#22D3EE' }}
+              style={{ color: '#BFA181' }}
             >
               {category.title}
             </h3>
@@ -37,9 +38,9 @@ const SkillsSection = () => {
                   key={skillIndex} 
                   className="px-3 py-1 rounded-full border transition-colors"
                   style={{
-                    backgroundColor: '#1E293B',
-                    color: '#E2E8F0',
-                    borderColor: '#22D3EE'
+                    backgroundColor: '#2E2E2E',
+                    color: '#D4C5B0',
+                    borderColor: '#BFA181'
                   }}
                 >
                   {skill}

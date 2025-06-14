@@ -4,14 +4,14 @@ import { Mail, Download, Linkedin } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-navy-dark py-12 animate-fade-in">
+    <footer className="bg-soft-black py-12 animate-fade-in">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold mb-2" style={{ color: '#E2E8F0' }}>
+            <h2 className="text-2xl font-bold mb-2" style={{ color: '#D4C5B0' }}>
               Sai Iyer
             </h2>
-            <p style={{ color: '#94A3B8' }}>Product Manager</p>
+            <p style={{ color: '#9E9E9E' }}>Product Manager</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -19,8 +19,8 @@ const FooterSection = () => {
               variant="outline" 
               className="gap-2 border-2"
               style={{ 
-                borderColor: '#22D3EE', 
-                color: '#22D3EE',
+                borderColor: '#BFA181', 
+                color: '#BFA181',
                 backgroundColor: 'transparent'
               }}
             >
@@ -31,8 +31,8 @@ const FooterSection = () => {
               variant="outline" 
               className="gap-2 border-2"
               style={{ 
-                borderColor: '#22D3EE', 
-                color: '#22D3EE',
+                borderColor: '#BFA181', 
+                color: '#BFA181',
                 backgroundColor: 'transparent'
               }}
             >
@@ -42,8 +42,8 @@ const FooterSection = () => {
             <Button 
               className="gap-2 hover:opacity-90 transition-opacity"
               style={{ 
-                backgroundColor: '#22D3EE', 
-                color: '#0F172A' 
+                backgroundColor: '#BFA181', 
+                color: '#1C1C1C' 
               }}
             >
               <Download size={18} />
@@ -52,8 +52,8 @@ const FooterSection = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-blue/10 text-center">
-          <p style={{ color: '#94A3B8' }}>
+        <div className="mt-8 pt-8 border-t border-muted-gold/10 text-center">
+          <p style={{ color: '#9E9E9E' }}>
             © {new Date().getFullYear()} Sai Iyer. All rights reserved.
           </p>
         </div>

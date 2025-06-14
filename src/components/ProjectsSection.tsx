@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { 
   Dialog,
@@ -27,10 +28,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2" style={{ color: '#E2E8F0' }}>
+        <h3 className="text-xl font-semibold mb-2" style={{ color: '#D4C5B0' }}>
           {project.title}
         </h3>
-        <p className="mb-4 line-clamp-2" style={{ color: '#94A3B8' }}>
+        <p className="mb-4 line-clamp-2" style={{ color: '#9E9E9E' }}>
           {project.shortDescription}
         </p>
         
@@ -40,17 +41,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
               variant="outline" 
               className="border-2"
               style={{ 
-                borderColor: '#22D3EE', 
-                color: '#22D3EE',
+                borderColor: '#BFA181', 
+                color: '#BFA181',
                 backgroundColor: 'transparent'
               }}
             >
               View Case Study
             </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-4xl bg-navy-light border-blue/20">
+          <DialogContent className="max-w-4xl bg-charcoal border-muted-gold/20">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold" style={{ color: '#E2E8F0' }}>
+              <DialogTitle className="text-2xl font-bold" style={{ color: '#D4C5B0' }}>
                 {project.title}
               </DialogTitle>
             </DialogHeader>
@@ -64,22 +65,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
               <div>
                 <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#BFA181' }}>
                     Challenge
                   </h4>
-                  <p style={{ color: '#E2E8F0' }}>{project.challenge}</p>
+                  <p style={{ color: '#D4C5B0' }}>{project.challenge}</p>
                 </div>
                 <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#BFA181' }}>
                     Approach
                   </h4>
-                  <p style={{ color: '#E2E8F0' }}>{project.approach}</p>
+                  <p style={{ color: '#D4C5B0' }}>{project.approach}</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#BFA181' }}>
                     Results
                   </h4>
-                  <p style={{ color: '#E2E8F0' }}>{project.result}</p>
+                  <p style={{ color: '#D4C5B0' }}>{project.result}</p>
                 </div>
               </div>
             </div>

@@ -25,24 +25,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				navy: {
-					DEFAULT: '#0F172A', /* Dark Navy */
-					light: '#1E293B', /* Slate 800 */
-					dark: '#0F172A', /* Dark Navy */
-				},
-				blue: {
-					light: '#22D3EE', /* Neon Cyan */
-					DEFAULT: '#22D3EE', /* Neon Cyan */
-					dark: '#0891B2', /* Darker cyan for hover */
-				},
-				slate: {
-					200: '#E2E8F0',
-					400: '#94A3B8',
-					800: '#1E293B',
-				},
-				cyan: {
-					neon: '#22D3EE',
-				},
+				'soft-black': '#1C1C1C',
+				'warm-beige': '#D4C5B0',
+				'muted-gray': '#9E9E9E',
+				'muted-gold': '#BFA181',
+				'charcoal': '#2E2E2E',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

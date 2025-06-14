@@ -8,33 +8,33 @@
 
 @layer base {
   :root {
-    --background: 15 23 42; /* #0F172A - Dark Navy */
-    --foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
+    --background: 28 28 28; /* #1C1C1C - Soft Black */
+    --foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
 
-    --card: 30 41 59; /* #1E293B - Slate 800 */
-    --card-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
+    --card: 46 46 46; /* #2E2E2E - Charcoal */
+    --card-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
 
-    --popover: 30 41 59; /* #1E293B - Slate 800 */
-    --popover-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
+    --popover: 46 46 46; /* #2E2E2E - Charcoal */
+    --popover-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
 
-    --primary: 34 211 238; /* #22D3EE - Neon Cyan */
-    --primary-foreground: 15 23 42; /* #0F172A - Dark Navy */
+    --primary: 191 161 129; /* #BFA181 - Muted Gold */
+    --primary-foreground: 28 28 28; /* #1C1C1C - Soft Black */
 
-    --secondary: 30 41 59; /* #1E293B - Slate 800 */
-    --secondary-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
+    --secondary: 46 46 46; /* #2E2E2E - Charcoal */
+    --secondary-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
 
-    --muted: 30 41 59; /* #1E293B - Slate 800 */
-    --muted-foreground: 148 163 184; /* #94A3B8 - Slate 400 */
+    --muted: 46 46 46; /* #2E2E2E - Charcoal */
+    --muted-foreground: 158 158 158; /* #9E9E9E - Muted Gray */
 
-    --accent: 34 211 238; /* #22D3EE - Neon Cyan */
-    --accent-foreground: 15 23 42; /* #0F172A - Dark Navy */
+    --accent: 191 161 129; /* #BFA181 - Muted Gold */
+    --accent-foreground: 28 28 28; /* #1C1C1C - Soft Black */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
+    --destructive-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
 
-    --border: 30 41 59; /* #1E293B - Slate 800 */
-    --input: 30 41 59; /* #1E293B - Slate 800 */
-    --ring: 34 211 238; /* #22D3EE - Neon Cyan */
+    --border: 46 46 46; /* #2E2E2E - Charcoal */
+    --input: 46 46 46; /* #2E2E2E - Charcoal */
+    --ring: 191 161 129; /* #BFA181 - Muted Gold */
 
     --radius: 0.75rem;
   }
@@ -47,8 +47,8 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background-color: #0F172A; /* Dark Navy */
-    color: #E2E8F0; /* Slate 200 */
+    background-color: #1C1C1C; /* Soft Black */
+    color: #D4C5B0; /* Warm Beige */
     font-size: 16px;
     line-height: 1.6;
   }
@@ -60,35 +60,35 @@
   h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #E2E8F0; /* Slate 200 */
+    color: #D4C5B0; /* Warm Beige */
   }
 }
 
 @layer components {
   .gradient-card {
-    background-color: #1E293B; /* Slate 800 */
+    background-color: #2E2E2E; /* Charcoal */
     @apply rounded-xl border border-accent/20 shadow-lg;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .gradient-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.15);
+    box-shadow: 0 8px 25px rgba(191, 161, 129, 0.15);
   }
   
   .highlight-gradient {
-    background-color: #22D3EE; /* Neon Cyan */
-    color: #0F172A; /* Dark Navy text */
+    background-color: #BFA181; /* Muted Gold */
+    color: #1C1C1C; /* Soft Black text */
   }
   
   .glow {
-    @apply shadow-[0_0_15px_rgba(34,211,238,0.3)];
+    @apply shadow-[0_0_15px_rgba(191,161,129,0.3)];
   }
   
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-8;
     font-family: 'Poppins', sans-serif;
-    color: #E2E8F0; /* Slate 200 */
+    color: #D4C5B0; /* Warm Beige */
   }
   
   .section-container {
@@ -96,14 +96,14 @@
   }
 
   .cta-button {
-    background-color: #22D3EE; /* Neon Cyan */
-    color: #0F172A; /* Dark Navy */
+    background-color: #BFA181; /* Muted Gold */
+    color: #1C1C1C; /* Soft Black */
     @apply font-medium py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .cta-button:hover {
     @apply scale-105 shadow-lg;
-    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.4);
+    box-shadow: 0 8px 25px rgba(191, 161, 129, 0.4);
   }
 
   a {
