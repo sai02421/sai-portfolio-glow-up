@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Mail, Linkedin } from "lucide-react";
@@ -86,10 +85,12 @@ const Navbar = () => {
 
           {/* Download CV Button */}
           <div className="hidden md:block">
-            <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full transition-all duration-300 hover:scale-105">
-              <Download size={16} className="mr-2" />
-              Download CV
-            </Button>
+            <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>
+              <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full transition-all duration-300 hover:scale-105">
+                <Download size={16} className="mr-2" />
+                Download CV
+              </Button>
+            </a>
           </div>
           
           {/* Mobile Menu Button */}
@@ -129,10 +130,12 @@ const Navbar = () => {
                   <Linkedin size={18} className="text-blue-600" />
                 </button>
               </div>
-              <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full">
-                <Download size={16} className="mr-2" />
-                Download CV
-              </Button>
+              <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>
+                <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full w-full">
+                  <Download size={16} className="mr-2" />
+                  Download CV
+                </Button>
+              </a>
             </div>
           </div>
         )}

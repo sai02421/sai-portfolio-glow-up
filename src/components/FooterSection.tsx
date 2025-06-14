@@ -45,7 +45,7 @@ const FooterSection = () => {
               <Linkedin size={20} className="text-purple-600" />
             </button>
             <a 
-              href="/sai-iyer-cv.pdf" 
+              href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" 
               download
               className="p-3 rounded-full bg-green-100 hover:bg-green-200 transition-all duration-300 hover:scale-105"
             >

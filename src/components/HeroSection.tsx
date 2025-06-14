@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Download, Linkedin, ArrowRight } from "lucide-react";
 
@@ -80,7 +79,7 @@ const HeroSection = () => {
                 className="gap-2 bg-green-500 hover:bg-green-600 text-white transition-all duration-300 hover:scale-105"
               >
                 <Download size={18} />
-                <a href="/sai-iyer-cv.pdf" download>Download CV</a>
+                <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>Download CV</a>
               </Button>
             </div>
           </div>

@@ -9,7 +9,7 @@ const Downloads = () => {
       title: "Resume / CV",
       description: "Latest version of my professional resume",
       icon: FileText,
-      link: "/sai-iyer-cv.pdf",
+      link: "https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_",
       type: "PDF"
     },
     {
