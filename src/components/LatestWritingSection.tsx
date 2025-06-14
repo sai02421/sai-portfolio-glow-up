@@ -1,4 +1,3 @@
-
 import { ExternalLink } from "lucide-react";
 
 const LatestWritingSection = () => {
@@ -77,7 +76,6 @@ const LatestWritingSection = () => {
               </p>
               
               <div className="inline-flex items-center gap-2 text-purple-600 font-medium hover:text-purple-700 transition-colors">
-                Read on LinkedIn
                 <ExternalLink size={16} />
               </div>
             </a>

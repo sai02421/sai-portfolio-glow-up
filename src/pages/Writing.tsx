@@ -7,17 +7,20 @@ const Writing = () => {
     {
       title: "Same UPI. Different UX.",
       description: "Why GPay feels effortless for P2P and PhonePe dominates for P2M. A UX breakdown of intent vs interface.",
-      link: "https://www.linkedin.com/posts/-sai-iyer_ux-productdesign-googlepay-activity-7337418119709134849-mWuZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
+      link: "https://www.linkedin.com/posts/-sai-iyer_ux-productdesign-googlepay-activity-7337418119709134849-mWuZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4",
+      emoji: "💳"
     },
     {
       title: "Lean-back vs Lean-in.",
       description: "Netflix plays to emotion, Prime plays to control. A UX teardown on how small decisions create binge-worthy experiences.",
-      link: "https://www.linkedin.com/posts/-sai-iyer_ux-usercentricdesign-netflix-activity-7338048523793248257-RRB1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
+      link: "https://www.linkedin.com/posts/-sai-iyer_ux-usercentricdesign-netflix-activity-7338048523793248257-RRB1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4",
+      emoji: "📺"
     },
     {
       title: "Still going after 384 days.",
       description: "How Duolingo designs for forgiveness, progress, and behavior — not pressure. A breakdown of habit-safe UX.",
-      link: "https://www.linkedin.com/posts/-sai-iyer_productdesign-ux-behavioraldesign-activity-7338769550655533056-xW0t?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
+      link: "https://www.linkedin.com/posts/-sai-iyer_productdesign-ux-behavioraldesign-activity-7338769550655533056-xW0t?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4",
+      emoji: "🦉"
     }
   ];
 
@@ -48,16 +51,19 @@ const Writing = () => {
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="section-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer block"
+              className="section-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer block group relative"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              <div className="absolute top-6 right-6 text-2xl">
+                {post.emoji}
+              </div>
+              
+              <h3 className="text-xl font-semibold mb-3 text-gray-900 pr-8">
                 {post.title}
               </h3>
               <p className="mb-4 leading-relaxed text-gray-600">
                 {post.description}
               </p>
               <div className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700">
-                Read on LinkedIn
                 <ExternalLink size={16} />
               </div>
             </a>

@@ -1,8 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Mail, Linkedin } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,10 +11,18 @@ const Navbar = () => {
   
   const navLinks = [
     { name: "About", href: "/" },
-    { name: "Writing", href: "/writing" },
+    { name: "Blogs", href: "/writing" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "#contact" }
   ];
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText("iyersai24@gmail.com");
+    window.location.href = "mailto:iyersai24@gmail.com";
+  };
+
+  const handleLinkedInClick = () => {
+    window.open("https://linkedin.com/in/", "_blank", "noopener,noreferrer");
+  };
   
   return (
     <>
@@ -46,6 +55,33 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            
+            {/* Contact Hover Card */}
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <button className="nav-link">
+                  Contact
+                </button>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-auto p-3 bg-white border border-gray-200 shadow-lg rounded-xl">
+                <div className="flex gap-3">
+                  <button
+                    onClick={handleEmailClick}
+                    className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                    title="Email"
+                  >
+                    <Mail size={18} className="text-gray-700" />
+                  </button>
+                  <button
+                    onClick={handleLinkedInClick}
+                    className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                    title="LinkedIn"
+                  >
+                    <Linkedin size={18} className="text-blue-600" />
+                  </button>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
           </div>
 
           {/* Download CV Button */}
@@ -79,6 +115,20 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              <div className="flex gap-3 justify-center pt-2">
+                <button
+                  onClick={handleEmailClick}
+                  className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
+                  <Mail size={18} className="text-gray-700" />
+                </button>
+                <button
+                  onClick={handleLinkedInClick}
+                  className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
+                  <Linkedin size={18} className="text-blue-600" />
+                </button>
+              </div>
               <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full">
                 <Download size={16} className="mr-2" />
                 Download CV
