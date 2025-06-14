@@ -42,8 +42,8 @@ const Navbar = () => {
               href={link.href}
               className="transition-colors"
               style={{ color: '#94A3B8' }}
-              onMouseEnter={(e) => e.target.style.color = '#60A5FA'}
-              onMouseLeave={(e) => e.target.style.color = '#94A3B8'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#60A5FA'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#94A3B8'}
             >
               {link.name}
             </a>
