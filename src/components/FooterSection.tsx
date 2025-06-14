@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Mail, Download, Linkedin, Home, FileText, FolderOpen } from "lucide-react";
+import { Mail, Download, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FooterSection = () => {
@@ -15,17 +15,20 @@ const FooterSection = () => {
             <p className="text-xl text-gray-600">Product Manager</p>
           </div>
           
-          {/* Navigation Icons */}
-          <div className="flex gap-6 mb-8">
-            <Link to="/" className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <Home size={20} className="text-gray-600" />
+          {/* Navigation Links */}
+          <div className="flex gap-8 mb-8">
+            <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              About
             </Link>
-            <Link to="/writing" className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <FileText size={20} className="text-gray-600" />
+            <Link to="/writing" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Writing
             </Link>
-            <Link to="/projects" className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <FolderOpen size={20} className="text-gray-600" />
+            <Link to="/projects" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Projects
             </Link>
+            <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Contact
+            </a>
           </div>
           
           {/* Contact Icons */}

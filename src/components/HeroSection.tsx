@@ -39,14 +39,14 @@ const HeroSection = () => {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900">
               Hello, I'm{" "}
-              <span className="block text-purple-600">Sai Iyer</span>
+              <span className="block text-pink-600">Sai Iyer</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-800 mb-6 leading-relaxed font-medium">
-              Product Manager building products with <span className="text-purple-600 font-semibold">empathy</span> and <span className="text-green-500 font-semibold">impact</span>. 
+            <p className="text-xl md:text-2xl text-gray-900 mb-6 leading-relaxed font-semibold">
+              Product Manager building products with <span className="text-pink-600 font-bold">empathy</span> and <span className="text-green-600 font-bold">impact</span>. 
             </p>
             
-            <p className="text-lg text-gray-700 mb-8 font-medium">
+            <p className="text-lg text-gray-800 mb-8 font-semibold">
               Based in Gujarat, India • Helping founders validate ideas and launch MVPs with data-driven strategies
             </p>
             
@@ -94,13 +94,13 @@ const HeroSection = () => {
 
           {/* Right Illustration */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-96 h-96 lg:w-[420px] lg:h-[420px] relative">
+            <div className="w-80 h-80 lg:w-96 lg:h-96 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
               <img 
                 src="/lovable-uploads/3c0701ae-6cbd-43ae-b8d3-a7eb591aea64.png" 
                 alt="Sai Iyer - Product Manager"
-                className="relative w-full h-full object-cover rounded-3xl border-4 border-white shadow-2xl"
+                className="relative w-full h-full object-cover object-center rounded-3xl border-4 border-white shadow-2xl"
               />
             </div>
           </div>
