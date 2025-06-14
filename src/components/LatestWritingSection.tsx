@@ -1,3 +1,4 @@
+
 import { ExternalLink } from "lucide-react";
 
 const LatestWritingSection = () => {
@@ -80,25 +81,6 @@ const LatestWritingSection = () => {
               </div>
             </a>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <div className="section-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Want to stay updated?</h3>
-            <p className="text-gray-600 mb-6">
-              Get weekly insights on product strategy, no-code tools, and startup validation directly in your inbox.
-            </p>
-            <div className="flex gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="your@email.com"
-                className="flex-1 px-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
