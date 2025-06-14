@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Competencies", href: "#competencies" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" }
   ];
   
@@ -26,11 +27,12 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-navy-dark/90 backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5"
+        isScrolled ? "backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5"
       }`}
+      style={{ backgroundColor: isScrolled ? 'rgba(28, 37, 51, 0.9)' : 'transparent' }}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-white">Sai Iyer</a>
+        <a href="#" className="text-xl font-bold" style={{ color: '#E2E8F0' }}>Sai Iyer</a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -38,20 +40,27 @@ const Navbar = () => {
             <a 
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="transition-colors"
+              style={{ color: '#94A3B8' }}
+              onMouseEnter={(e) => e.target.style.color = '#60A5FA'}
+              onMouseLeave={(e) => e.target.style.color = '#94A3B8'}
             >
               {link.name}
             </a>
           ))}
           
-          <Button className="highlight-gradient hover:opacity-90 transition-opacity">
+          <Button 
+            className="transition-all duration-300 hover:opacity-90"
+            style={{ backgroundColor: '#3B82F6', color: '#F1F5F9' }}
+          >
             <a href="/sai-iyer-cv.pdf" download>Download CV</a>
           </Button>
         </div>
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden"
+          style={{ color: '#E2E8F0' }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,20 +69,24 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-navy-dark/95 backdrop-blur-md border-b border-blue/10">
+        <div className="md:hidden backdrop-blur-md border-b" style={{ backgroundColor: 'rgba(28, 37, 51, 0.95)', borderColor: '#334155' }}>
           <div className="px-6 py-4 space-y-4">
             {navLinks.map((link) => (
               <a 
                 key={link.name}
                 href={link.href}
-                className="block text-gray-300 hover:text-white transition-colors"
+                className="block transition-colors"
+                style={{ color: '#94A3B8' }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
             
-            <Button className="w-full highlight-gradient hover:opacity-90 transition-opacity">
+            <Button 
+              className="w-full transition-all duration-300 hover:opacity-90"
+              style={{ backgroundColor: '#3B82F6', color: '#F1F5F9' }}
+            >
               <a href="/sai-iyer-cv.pdf" download>Download CV</a>
             </Button>
           </div>

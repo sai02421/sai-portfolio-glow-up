@@ -41,24 +41,25 @@ const BlogSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post, index) => (
-          <div key={index} className="gradient-card p-6 hover:scale-105 transition-transform duration-200" style={{ backgroundColor: '#273447' }}>
+          <a
+            key={index}
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gradient-card p-6 hover:scale-105 transition-transform duration-200 cursor-pointer block"
+            style={{ backgroundColor: '#273447' }}
+          >
             <h3 className="text-xl font-semibold mb-3" style={{ color: '#E2E8F0' }}>
               {post.title}
             </h3>
             <p className="mb-4 leading-relaxed" style={{ color: '#94A3B8' }}>
               {post.description}
             </p>
-            <a 
-              href={post.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 transition-colors font-medium"
-              style={{ color: '#60A5FA' }}
-            >
+            <div className="inline-flex items-center gap-2 transition-colors font-medium" style={{ color: '#60A5FA' }}>
               Read on LinkedIn
               <ExternalLink size={16} />
-            </a>
-          </div>
+            </div>
+          </a>
         ))}
       </div>
     </section>
