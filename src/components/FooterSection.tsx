@@ -17,7 +17,7 @@ const FooterSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               variant="outline" 
-              className="gap-2 border-2"
+              className="gap-2 border-2 hover:bg-accent hover:text-accent-foreground transition-colors"
               style={{ 
                 borderColor: '#60A5FA', 
                 color: '#60A5FA',
@@ -29,7 +29,7 @@ const FooterSection = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="gap-2 border-2"
+              className="gap-2 border-2 hover:bg-accent hover:text-accent-foreground transition-colors"
               style={{ 
                 borderColor: '#60A5FA', 
                 color: '#60A5FA',

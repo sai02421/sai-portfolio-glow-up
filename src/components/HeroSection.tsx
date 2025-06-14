@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-4 mb-8">
             <Button 
               variant="outline" 
-              className="gap-2 border-2" 
+              className="gap-2 border-2 hover:bg-accent hover:text-accent-foreground transition-colors" 
               style={{ 
                 borderColor: '#60A5FA', 
                 color: '#60A5FA',
@@ -35,7 +35,7 @@ const HeroSection = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="gap-2 border-2" 
+              className="gap-2 border-2 hover:bg-accent hover:text-accent-foreground transition-colors" 
               style={{ 
                 borderColor: '#60A5FA', 
                 color: '#60A5FA',
@@ -60,7 +60,7 @@ const HeroSection = () => {
         
         <div className="order-1 md:order-2 flex justify-center">
           <div 
-            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 glow"
+            className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 glow"
             style={{ borderColor: '#60A5FA' }}
           >
             <img 
