@@ -2,97 +2,93 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
   
   const navLinks = [
-    { name: "Competencies", href: "#competencies" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" }
+    { name: "About", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: "Writing", href: "/writing" },
+    { name: "Downloads", href: "/downloads" },
+    { name: "Newsletter", href: "/newsletter" }
   ];
   
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5"
-      }`}
-      style={{ backgroundColor: isScrolled ? 'rgba(28, 37, 51, 0.9)' : 'transparent' }}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold" style={{ color: '#E2E8F0' }}>Sai Iyer</a>
-        
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="transition-colors"
-              style={{ color: '#94A3B8' }}
-              onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#60A5FA'}
-              onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#94A3B8'}
-            >
-              {link.name}
-            </a>
-          ))}
-          
-          <Button 
-            className="transition-all duration-300 hover:opacity-90"
-            style={{ backgroundColor: '#3B82F6', color: '#F1F5F9' }}
-          >
-            <a href="/sai-iyer-cv.pdf" download>Download CV</a>
-          </Button>
-        </div>
-        
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden"
-          style={{ color: '#E2E8F0' }}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+    <>
+      {/* Floating dots background */}
+      <div className="floating-dots">
+        <div className="dot dot-1"></div>
+        <div className="dot dot-2"></div>
+        <div className="dot dot-3"></div>
+        <div className="dot dot-4"></div>
+        <div className="dot dot-5"></div>
       </div>
-      
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden backdrop-blur-md border-b" style={{ backgroundColor: 'rgba(28, 37, 51, 0.95)', borderColor: '#334155' }}>
-          <div className="px-6 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <a 
+
+      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="floating-nav px-6 py-3 flex items-center space-x-1">
+          {/* Logo in center */}
+          <div className="flex items-center justify-center flex-1">
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
+            </Link>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-2 absolute left-6">
+            {navLinks.slice(0, 3).map((link) => (
+              <Link 
                 key={link.name}
-                href={link.href}
-                className="block transition-colors"
-                style={{ color: '#94A3B8' }}
-                onClick={() => setMobileMenuOpen(false)}
+                to={link.href}
+                className={`nav-link ${location.pathname === link.href ? 'bg-blue-100 text-blue-600' : ''}`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            
-            <Button 
-              className="w-full transition-all duration-300 hover:opacity-90"
-              style={{ backgroundColor: '#3B82F6', color: '#F1F5F9' }}
-            >
-              <a href="/sai-iyer-cv.pdf" download>Download CV</a>
-            </Button>
           </div>
+
+          <div className="hidden md:flex items-center space-x-2 absolute right-6">
+            {navLinks.slice(3).map((link) => (
+              <Link 
+                key={link.name}
+                to={link.href}
+                className={`nav-link ${location.pathname === link.href ? 'bg-blue-100 text-blue-600' : ''}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden absolute right-4"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-      )}
-    </nav>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-2 floating-nav p-4">
+            <div className="flex flex-col space-y-2">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name}
+                  to={link.href}
+                  className={`nav-link ${location.pathname === link.href ? 'bg-blue-100 text-blue-600' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
