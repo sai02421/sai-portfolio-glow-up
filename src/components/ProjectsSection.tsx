@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { 
   Dialog,
@@ -28,18 +27,32 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-        <p className="text-gray-400 mb-4 line-clamp-2">{project.shortDescription}</p>
+        <h3 className="text-xl font-semibold mb-2" style={{ color: '#E2E8F0' }}>
+          {project.title}
+        </h3>
+        <p className="mb-4 line-clamp-2" style={{ color: '#94A3B8' }}>
+          {project.shortDescription}
+        </p>
         
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" className="border-blue hover:bg-blue/10">
+            <Button 
+              variant="outline" 
+              className="border-2"
+              style={{ 
+                borderColor: '#22D3EE', 
+                color: '#22D3EE',
+                backgroundColor: 'transparent'
+              }}
+            >
               View Case Study
             </Button>
           </DialogTrigger>
           <DialogContent className="max-w-4xl bg-navy-light border-blue/20">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-white">{project.title}</DialogTitle>
+              <DialogTitle className="text-2xl font-bold" style={{ color: '#E2E8F0' }}>
+                {project.title}
+              </DialogTitle>
             </DialogHeader>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
               <div>
@@ -51,16 +64,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
               <div>
                 <div className="mb-4">
-                  <h4 className="text-lg font-semibold text-blue-light mb-2">Challenge</h4>
-                  <p className="text-gray-300">{project.challenge}</p>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                    Challenge
+                  </h4>
+                  <p style={{ color: '#E2E8F0' }}>{project.challenge}</p>
                 </div>
                 <div className="mb-4">
-                  <h4 className="text-lg font-semibold text-blue-light mb-2">Approach</h4>
-                  <p className="text-gray-300">{project.approach}</p>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                    Approach
+                  </h4>
+                  <p style={{ color: '#E2E8F0' }}>{project.approach}</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-blue-light mb-2">Results</h4>
-                  <p className="text-gray-300">{project.result}</p>
+                  <h4 className="text-lg font-semibold mb-2" style={{ color: '#22D3EE' }}>
+                    Results
+                  </h4>
+                  <p style={{ color: '#E2E8F0' }}>{project.result}</p>
                 </div>
               </div>
             </div>

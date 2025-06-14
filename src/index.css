@@ -8,33 +8,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 0 0% 88%;
+    --background: 15 23 42; /* #0F172A - Dark Navy */
+    --foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
 
-    --card: 223 33% 17%;
-    --card-foreground: 0 0% 88%;
+    --card: 30 41 59; /* #1E293B - Slate 800 */
+    --card-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
 
-    --popover: 223 33% 17%;
-    --popover-foreground: 0 0% 88%;
+    --popover: 30 41 59; /* #1E293B - Slate 800 */
+    --popover-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
 
-    --primary: 221 100% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 34 211 238; /* #22D3EE - Neon Cyan */
+    --primary-foreground: 15 23 42; /* #0F172A - Dark Navy */
 
-    --secondary: 222 47% 30%;
-    --secondary-foreground: 0 0% 88%;
+    --secondary: 30 41 59; /* #1E293B - Slate 800 */
+    --secondary-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
 
-    --muted: 222 47% 20%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 30 41 59; /* #1E293B - Slate 800 */
+    --muted-foreground: 148 163 184; /* #94A3B8 - Slate 400 */
 
-    --accent: 221 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 34 211 238; /* #22D3EE - Neon Cyan */
+    --accent-foreground: 15 23 42; /* #0F172A - Dark Navy */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 88%;
+    --destructive-foreground: 226 232 240; /* #E2E8F0 - Slate 200 */
 
-    --border: 222 47% 25%;
-    --input: 222 47% 25%;
-    --ring: 221 100% 60%;
+    --border: 30 41 59; /* #1E293B - Slate 800 */
+    --input: 30 41 59; /* #1E293B - Slate 800 */
+    --ring: 34 211 238; /* #22D3EE - Neon Cyan */
 
     --radius: 0.75rem;
   }
@@ -46,7 +46,9 @@
   }
 
   body {
-    @apply bg-navy text-foreground font-inter;
+    @apply bg-background text-foreground font-inter;
+    background-color: #0F172A; /* Dark Navy */
+    color: #E2E8F0; /* Slate 200 */
     font-size: 16px;
     line-height: 1.6;
   }
@@ -58,30 +60,35 @@
   h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    color: #E2E8F0; /* Slate 200 */
   }
 }
 
 @layer components {
   .gradient-card {
-    @apply bg-gradient-to-br from-navy-light to-navy rounded-xl border border-blue/10 shadow-lg shadow-navy-dark/30;
+    background-color: #1E293B; /* Slate 800 */
+    @apply rounded-xl border border-accent/20 shadow-lg;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .gradient-card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.15);
   }
   
   .highlight-gradient {
-    @apply bg-gradient-to-r from-blue to-blue-light text-white;
+    background-color: #22D3EE; /* Neon Cyan */
+    color: #0F172A; /* Dark Navy text */
   }
   
   .glow {
-    @apply shadow-[0_0_15px_rgba(77,124,254,0.3)];
+    @apply shadow-[0_0_15px_rgba(34,211,238,0.3)];
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-white;
+    @apply text-3xl md:text-4xl font-bold mb-8;
     font-family: 'Poppins', sans-serif;
+    color: #E2E8F0; /* Slate 200 */
   }
   
   .section-container {
@@ -89,11 +96,14 @@
   }
 
   .cta-button {
-    @apply bg-blue hover:bg-blue-dark text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+    background-color: #22D3EE; /* Neon Cyan */
+    color: #0F172A; /* Dark Navy */
+    @apply font-medium py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .cta-button:hover {
     @apply scale-105 shadow-lg;
+    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.4);
   }
 
   a {

@@ -1,4 +1,3 @@
-
 const SkillsSection = () => {
   const skillCategories = [
     {
@@ -26,12 +25,22 @@ const SkillsSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {skillCategories.map((category, index) => (
           <div key={index} className="gradient-card p-6">
-            <h3 className="text-xl font-semibold mb-4 text-blue-light">{category.title}</h3>
+            <h3 
+              className="text-xl font-semibold mb-4" 
+              style={{ color: '#22D3EE' }}
+            >
+              {category.title}
+            </h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, skillIndex) => (
                 <span 
                   key={skillIndex} 
-                  className="px-3 py-1 rounded-full bg-navy text-gray-300 border border-blue/20 hover:border-blue/40 transition-colors"
+                  className="px-3 py-1 rounded-full border transition-colors"
+                  style={{
+                    backgroundColor: '#1E293B',
+                    color: '#E2E8F0',
+                    borderColor: '#22D3EE'
+                  }}
                 >
                   {skill}
                 </span>

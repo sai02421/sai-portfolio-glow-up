@@ -26,14 +26,22 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				navy: {
-					DEFAULT: '#1A2B4A',
-					light: '#2A3B5A',
-					dark: '#0A1B3A',
+					DEFAULT: '#0F172A', /* Dark Navy */
+					light: '#1E293B', /* Slate 800 */
+					dark: '#0F172A', /* Dark Navy */
 				},
 				blue: {
-					light: '#4D7CFE',
-					DEFAULT: '#335BFF',
-					dark: '#2348E5',
+					light: '#22D3EE', /* Neon Cyan */
+					DEFAULT: '#22D3EE', /* Neon Cyan */
+					dark: '#0891B2', /* Darker cyan for hover */
+				},
+				slate: {
+					200: '#E2E8F0',
+					400: '#94A3B8',
+					800: '#1E293B',
+				},
+				cyan: {
+					neon: '#22D3EE',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
