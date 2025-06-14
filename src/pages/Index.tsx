@@ -1,8 +1,8 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import QuoteSection from "@/components/QuoteSection";
-import CompetenciesSection from "@/components/CompetenciesSection";
+import WhatIDoSection from "@/components/WhatIDoSection";
+import LatestWritingSection from "@/components/LatestWritingSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -11,8 +11,8 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <div className="max-w-6xl mx-auto px-6 py-20">
-        <QuoteSection />
-        <CompetenciesSection />
+        <WhatIDoSection />
+        <LatestWritingSection />
       </div>
       <FooterSection />
     </div>
