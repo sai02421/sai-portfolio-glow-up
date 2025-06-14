@@ -8,33 +8,34 @@
 
 @layer base {
   :root {
-    --background: 28 28 28; /* #1C1C1C - Soft Black */
-    --foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
+    /* Dark Elegant Theme */
+    --background: 28 37 51; /* #1C2533 */
+    --foreground: 241 245 249; /* #F1F5F9 */
 
-    --card: 46 46 46; /* #2E2E2E - Charcoal */
-    --card-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
+    --card: 39 52 71; /* #273447 */
+    --card-foreground: 241 245 249; /* #F1F5F9 */
 
-    --popover: 46 46 46; /* #2E2E2E - Charcoal */
-    --popover-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
+    --popover: 39 52 71; /* #273447 */
+    --popover-foreground: 241 245 249; /* #F1F5F9 */
 
-    --primary: 191 161 129; /* #BFA181 - Muted Gold */
-    --primary-foreground: 28 28 28; /* #1C1C1C - Soft Black */
+    --primary: 59 130 246; /* #3B82F6 */
+    --primary-foreground: 241 245 249; /* #F1F5F9 */
 
-    --secondary: 46 46 46; /* #2E2E2E - Charcoal */
-    --secondary-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
+    --secondary: 39 52 71; /* #273447 */
+    --secondary-foreground: 241 245 249; /* #F1F5F9 */
 
-    --muted: 46 46 46; /* #2E2E2E - Charcoal */
-    --muted-foreground: 158 158 158; /* #9E9E9E - Muted Gray */
+    --muted: 39 52 71; /* #273447 */
+    --muted-foreground: 148 163 184; /* #94A3B8 */
 
-    --accent: 191 161 129; /* #BFA181 - Muted Gold */
-    --accent-foreground: 28 28 28; /* #1C1C1C - Soft Black */
+    --accent: 96 165 250; /* #60A5FA */
+    --accent-foreground: 28 37 51; /* #1C2533 */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 212 197 176; /* #D4C5B0 - Warm Beige */
+    --destructive-foreground: 241 245 249; /* #F1F5F9 */
 
-    --border: 46 46 46; /* #2E2E2E - Charcoal */
-    --input: 46 46 46; /* #2E2E2E - Charcoal */
-    --ring: 191 161 129; /* #BFA181 - Muted Gold */
+    --border: 51 65 85; /* #334155 */
+    --input: 39 52 71; /* #273447 */
+    --ring: 96 165 250; /* #60A5FA */
 
     --radius: 0.75rem;
   }
@@ -47,8 +48,8 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background-color: #1C1C1C; /* Soft Black */
-    color: #D4C5B0; /* Warm Beige */
+    background-color: #1C2533;
+    color: #F1F5F9;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -60,50 +61,51 @@
   h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #D4C5B0; /* Warm Beige */
+    color: #E2E8F0;
   }
 }
 
 @layer components {
   .gradient-card {
-    background-color: #2E2E2E; /* Charcoal */
+    background-color: #273447;
     @apply rounded-xl border border-accent/20 shadow-lg;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .gradient-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(191, 161, 129, 0.15);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.15);
   }
   
   .highlight-gradient {
-    background-color: #BFA181; /* Muted Gold */
-    color: #1C1C1C; /* Soft Black text */
+    background-color: #3B82F6;
+    color: #F1F5F9;
   }
   
   .glow {
-    @apply shadow-[0_0_15px_rgba(191,161,129,0.3)];
+    @apply shadow-[0_0_15px_rgba(96,165,250,0.3)];
   }
   
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-8;
     font-family: 'Poppins', sans-serif;
-    color: #D4C5B0; /* Warm Beige */
+    color: #E2E8F0;
   }
   
   .section-container {
-    @apply max-w-7xl mx-auto px-6 py-16 md:py-24;
+    @apply max-w-7xl mx-auto px-6 py-12 md:py-16;
   }
 
   .cta-button {
-    background-color: #BFA181; /* Muted Gold */
-    color: #1C1C1C; /* Soft Black */
+    background-color: #3B82F6;
+    color: #F1F5F9;
     @apply font-medium py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .cta-button:hover {
+    background-color: #2563EB;
     @apply scale-105 shadow-lg;
-    box-shadow: 0 8px 25px rgba(191, 161, 129, 0.4);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
   }
 
   a {

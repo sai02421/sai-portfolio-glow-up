@@ -4,14 +4,14 @@ import { Mail, Download, Linkedin } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-soft-black py-12 animate-fade-in">
+    <footer className="py-12 animate-fade-in" style={{ backgroundColor: '#1C2533' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold mb-2" style={{ color: '#D4C5B0' }}>
+            <h2 className="text-2xl font-bold mb-2" style={{ color: '#E2E8F0' }}>
               Sai Iyer
             </h2>
-            <p style={{ color: '#9E9E9E' }}>Product Manager</p>
+            <p style={{ color: '#94A3B8' }}>Product Manager</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -19,8 +19,8 @@ const FooterSection = () => {
               variant="outline" 
               className="gap-2 border-2"
               style={{ 
-                borderColor: '#BFA181', 
-                color: '#BFA181',
+                borderColor: '#60A5FA', 
+                color: '#60A5FA',
                 backgroundColor: 'transparent'
               }}
             >
@@ -31,8 +31,8 @@ const FooterSection = () => {
               variant="outline" 
               className="gap-2 border-2"
               style={{ 
-                borderColor: '#BFA181', 
-                color: '#BFA181',
+                borderColor: '#60A5FA', 
+                color: '#60A5FA',
                 backgroundColor: 'transparent'
               }}
             >
@@ -42,8 +42,8 @@ const FooterSection = () => {
             <Button 
               className="gap-2 hover:opacity-90 transition-opacity"
               style={{ 
-                backgroundColor: '#BFA181', 
-                color: '#1C1C1C' 
+                backgroundColor: '#3B82F6', 
+                color: '#F1F5F9' 
               }}
             >
               <Download size={18} />
@@ -52,8 +52,8 @@ const FooterSection = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-muted-gold/10 text-center">
-          <p style={{ color: '#9E9E9E' }}>
+        <div className="mt-8 pt-8 border-t text-center" style={{ borderColor: '#334155' }}>
+          <p style={{ color: '#94A3B8' }}>
             © {new Date().getFullYear()} Sai Iyer. All rights reserved.
           </p>
         </div>

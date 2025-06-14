@@ -1,4 +1,3 @@
-
 import { 
   User, Code, Database, Calendar, Users, Tag
 } from "lucide-react";
@@ -13,21 +12,21 @@ const CompetencyCard = ({
   icon: React.ElementType;
 }) => {
   return (
-    <div className="gradient-card p-6 transition-all duration-300 hover:glow">
+    <div className="gradient-card p-6 transition-all duration-300 hover:glow" style={{ backgroundColor: '#273447' }}>
       <div className="flex flex-col items-center md:items-start">
         <div 
           className="mb-4 p-3 rounded-full"
           style={{ 
-            backgroundColor: 'rgba(191, 161, 129, 0.1)',
-            color: '#BFA181'
+            backgroundColor: 'rgba(96, 165, 250, 0.1)',
+            color: '#60A5FA'
           }}
         >
           <Icon size={24} />
         </div>
-        <h3 className="text-xl font-semibold mb-2 text-center md:text-left" style={{ color: '#D4C5B0' }}>
+        <h3 className="text-xl font-semibold mb-2 text-center md:text-left" style={{ color: '#E2E8F0' }}>
           {title}
         </h3>
-        <p className="text-center md:text-left" style={{ color: '#9E9E9E' }}>
+        <p className="text-center md:text-left" style={{ color: '#94A3B8' }}>
           {description}
         </p>
       </div>
@@ -70,8 +69,8 @@ const CompetenciesSection = () => {
   ];
 
   return (
-    <section id="competencies" className="section-container animate-fade-in">
-      <h2 className="section-title text-center">Core Competencies</h2>
+    <section id="competencies" className="section-container animate-fade-in" style={{ backgroundColor: '#1C2533' }}>
+      <h2 className="section-title text-center" style={{ color: '#E2E8F0' }}>Core Competencies</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {competencies.map((competency, index) => (
           <CompetencyCard

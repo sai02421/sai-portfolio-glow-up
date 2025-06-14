@@ -10,7 +10,7 @@ import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-soft-black text-foreground font-inter">
+    <div className="min-h-screen text-foreground font-inter" style={{ backgroundColor: '#1C2533', color: '#F1F5F9' }}>
       <Navbar />
       <HeroSection />
       <QuoteSection />

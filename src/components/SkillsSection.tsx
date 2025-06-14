@@ -1,4 +1,3 @@
-
 const SkillsSection = () => {
   const skillCategories = [
     {
@@ -20,15 +19,15 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="section-container bg-soft-black animate-fade-in">
-      <h2 className="section-title text-center">Skills & Tools</h2>
+    <section id="skills" className="section-container animate-fade-in" style={{ backgroundColor: '#1C2533' }}>
+      <h2 className="section-title text-center" style={{ color: '#E2E8F0' }}>Skills & Tools</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {skillCategories.map((category, index) => (
-          <div key={index} className="gradient-card p-6">
+          <div key={index} className="gradient-card p-6" style={{ backgroundColor: '#273447' }}>
             <h3 
               className="text-xl font-semibold mb-4" 
-              style={{ color: '#BFA181' }}
+              style={{ color: '#60A5FA' }}
             >
               {category.title}
             </h3>
@@ -38,9 +37,9 @@ const SkillsSection = () => {
                   key={skillIndex} 
                   className="px-3 py-1 rounded-full border transition-colors"
                   style={{
-                    backgroundColor: '#2E2E2E',
-                    color: '#D4C5B0',
-                    borderColor: '#BFA181'
+                    backgroundColor: '#273447',
+                    color: '#F1F5F9',
+                    borderColor: '#60A5FA'
                   }}
                 >
                   {skill}
