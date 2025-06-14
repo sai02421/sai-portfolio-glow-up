@@ -1,25 +1,54 @@
 
 import { Button } from "@/components/ui/button";
-import { Mail, Download, Linkedin } from "lucide-react";
+import { Mail, Download, Linkedin, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center px-6 relative z-10">
+      <div className="floating-dots">
+        <div className="dot dot-1"></div>
+        <div className="dot dot-2"></div>
+        <div className="dot dot-3"></div>
+        <div className="dot dot-4"></div>
+        <div className="dot dot-5"></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
+            <div className="mb-4">
+              <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                👋 Product Manager & Builder
+              </span>
+            </div>
+            
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Hello, I'm{" "}
               <span className="block text-purple-600">Sai Iyer</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-              Product Manager building products with empathy and impact. Based in Gujarat, India.
+            
+            <p className="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed">
+              Product Manager building products with <span className="text-purple-600 font-semibold">empathy</span> and <span className="text-green-500 font-semibold">impact</span>. 
             </p>
             
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 mb-12">
-              About Me
-            </Button>
+            <p className="text-lg text-gray-600 mb-8">
+              Based in Gujarat, India • Helping founders validate ideas and launch MVPs with data-driven strategies
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group">
+                Learn My Story
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="text-lg px-8 py-4 rounded-full bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+              >
+                View My Work
+              </Button>
+            </div>
 
             {/* Contact Buttons */}
             <div className="flex flex-wrap gap-4">
@@ -49,10 +78,12 @@ const HeroSection = () => {
           {/* Right Illustration */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-80 h-80 lg:w-96 lg:h-96 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
               <img 
                 src="/placeholder.svg" 
-                alt="Sai Iyer Illustration"
-                className="w-full h-full object-cover rounded-3xl border-4 border-white shadow-2xl"
+                alt="Sai Iyer - Product Manager"
+                className="relative w-full h-full object-cover rounded-3xl border-4 border-white shadow-2xl"
               />
             </div>
           </div>
