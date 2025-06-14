@@ -30,12 +30,8 @@ const Navbar = () => {
         <div className="floating-nav px-6 py-3 flex items-center justify-between min-w-[600px]">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/3c0701ae-6cbd-43ae-b8d3-a7eb591aea64.png" 
-                alt="Sai Iyer Logo"
-                className="w-full h-full object-cover"
-              />
+            <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center">
+              <span className="text-white font-bold text-lg">SI</span>
             </div>
           </Link>
           
