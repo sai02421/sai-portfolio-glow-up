@@ -70,15 +70,6 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
 .floating-dots {
   position: fixed;
   width: 100%;
@@ -90,53 +81,71 @@
 .dot {
   position: absolute;
   border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 .dot-1 {
-  width: 25px;
-  height: 25px;
+  width: 8px;
+  height: 8px;
   background: linear-gradient(45deg, #8b5cf6, #ec4899);
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
+  top: 15%;
+  left: 8%;
 }
 
 .dot-2 {
-  width: 20px;
-  height: 20px;
+  width: 6px;
+  height: 6px;
   background: linear-gradient(45deg, #06b6d4, #3b82f6);
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
+  top: 70%;
+  right: 12%;
 }
 
 .dot-3 {
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   background: linear-gradient(45deg, #10b981, #22c55e);
-  bottom: 20%;
-  left: 20%;
-  animation-delay: 4s;
+  bottom: 25%;
+  left: 15%;
 }
 
 .dot-4 {
-  width: 18px;
-  height: 18px;
+  width: 7px;
+  height: 7px;
   background: linear-gradient(45deg, #f59e0b, #f97316);
-  top: 40%;
-  right: 30%;
-  animation-delay: 1s;
+  top: 45%;
+  right: 25%;
 }
 
 .dot-5 {
-  width: 22px;
-  height: 22px;
+  width: 9px;
+  height: 9px;
   background: linear-gradient(45deg, #ef4444, #f97316);
-  bottom: 40%;
-  right: 10%;
-  animation-delay: 3s;
+  bottom: 50%;
+  right: 8%;
+}
+
+.dot-6 {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  top: 25%;
+  left: 70%;
+}
+
+.dot-7 {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  top: 80%;
+  left: 45%;
+}
+
+.dot-8 {
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(45deg, #10b981, #22c55e);
+  top: 60%;
+  left: 25%;
 }
 
 @layer components {

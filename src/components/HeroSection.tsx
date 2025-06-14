@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Mail, Download, Linkedin, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center px-6 relative z-10">
       <div className="floating-dots">
@@ -11,6 +18,9 @@ const HeroSection = () => {
         <div className="dot dot-3"></div>
         <div className="dot dot-4"></div>
         <div className="dot dot-5"></div>
+        <div className="dot dot-6"></div>
+        <div className="dot dot-7"></div>
+        <div className="dot dot-8"></div>
       </div>
       
       <div className="max-w-6xl mx-auto w-full">
@@ -37,7 +47,10 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group">
+              <Button 
+                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group"
+                onClick={() => scrollToSection('what-i-do')}
+              >
                 Learn My Story
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
