@@ -25,15 +25,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				'dark-elegant': '#1C2533',
-				'card-bg': '#273447',
-				'text-primary': '#F1F5F9',
-				'text-muted': '#94A3B8',
-				'heading': '#E2E8F0',
-				'link-color': '#60A5FA',
-				'button-bg': '#3B82F6',
-				'button-hover': '#2563EB',
-				'border-color': '#334155',
+				
+				// Design System Colors
+				'navy-blue': 'rgb(var(--navy-blue) / <alpha-value>)',
+				'earthen-luxe': 'rgb(var(--earthen-luxe) / <alpha-value>)',
+				'dark-green': 'rgb(var(--dark-green) / <alpha-value>)',
+				'digital-lavender': 'rgb(var(--digital-lavender) / <alpha-value>)',
+				'light-gray': 'rgb(var(--light-gray) / <alpha-value>)',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -103,7 +102,15 @@ export default {
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
+			maxWidth: {
+				'container': '1280px',
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

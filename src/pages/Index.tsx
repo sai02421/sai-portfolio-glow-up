@@ -1,20 +1,22 @@
 
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import WhatIDoSection from "@/components/WhatIDoSection";
 import LatestWritingSection from "@/components/LatestWritingSection";
-import FooterSection from "@/components/FooterSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <WhatIDoSection />
-        <LatestWritingSection />
-      </div>
-      <FooterSection />
+    <div className="min-h-screen bg-earthen-luxe">
+      <Header />
+      <main>
+        <HeroSection />
+        <div className="container-max py-20">
+          <WhatIDoSection />
+          <LatestWritingSection />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };
