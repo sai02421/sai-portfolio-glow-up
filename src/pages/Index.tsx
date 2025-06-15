@@ -1,22 +1,22 @@
 
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import WhatIDoSection from "@/components/WhatIDoSection";
-import LatestWritingSection from "@/components/LatestWritingSection";
-import Footer from "@/components/Footer";
+import ModernHeader from "@/components/ModernHeader";
+import ModernHero from "@/components/ModernHero";
+import TrustedBySection from "@/components/TrustedBySection";
+import ExperienceJourney from "@/components/ExperienceJourney";
+import BlogsTeardowns from "@/components/BlogsTeardowns";
+import ModernFooter from "@/components/ModernFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-earthen-luxe">
-      <Header />
+    <div className="min-h-screen bg-earthen-luxe page-transition">
+      <ModernHeader />
       <main>
-        <HeroSection />
-        <div className="container-max py-20">
-          <WhatIDoSection />
-          <LatestWritingSection />
-        </div>
+        <ModernHero />
+        <TrustedBySection />
+        <ExperienceJourney />
+        <BlogsTeardowns />
       </main>
-      <Footer />
+      <ModernFooter />
     </div>
   );
 };

@@ -62,6 +62,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 			},
+			fontFamily: {
+				'fredoka': ['Fredoka One', 'cursive'],
+				'source-sans': ['Source Sans Pro', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,25 +88,26 @@ export default {
 						height: '0'
 					}
 				},
-				'fade-in': {
+				'fade-in-up': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(10px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'typewriter': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out'
-			},
-			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
-				'poppins': ['Poppins', 'sans-serif'],
+				'fade-in-up': 'fade-in-up 0.5s ease-out',
+				'typewriter': 'typewriter 3s steps(40, end)'
 			},
 			maxWidth: {
 				'container': '1280px',
