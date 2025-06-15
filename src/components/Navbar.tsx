@@ -34,12 +34,12 @@ const Navbar = () => {
         <div className="dot dot-5"></div>
       </div>
 
-      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="floating-nav px-6 py-3 flex items-center justify-between min-w-[600px]">
+      <nav className="fixed top-3 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] sm:w-auto max-w-[600px]">
+        <div className="floating-nav px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between min-w-0 sm:min-w-[600px]">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center">
-              <span className="text-pink-500 font-bold text-lg">SI</span>
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gray-900 flex items-center justify-center">
+              <span className="text-pink-500 font-bold text-base sm:text-lg">SI</span>
             </div>
           </Link>
           
@@ -95,7 +95,7 @@ const Navbar = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -110,28 +110,28 @@ const Navbar = () => {
                 <Link 
                   key={link.name}
                   to={link.href}
-                  className={`nav-link ${location.pathname === link.href ? 'bg-purple-100 text-purple-600' : ''}`}
+                  className={`nav-link text-center py-3 ${location.pathname === link.href ? 'bg-purple-100 text-purple-600' : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="flex gap-3 justify-center pt-2">
+              <div className="flex gap-3 justify-center pt-2 border-t border-gray-200">
                 <button
                   onClick={handleEmailClick}
-                  className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
                   <Mail size={18} className="text-gray-700" />
                 </button>
                 <button
                   onClick={handleLinkedInClick}
-                  className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
                   <Linkedin size={18} className="text-blue-600" />
                 </button>
               </div>
               <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>
-                <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full w-full">
+                <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-3 rounded-full w-full">
                   <Download size={16} className="mr-2" />
                   Download CV
                 </Button>

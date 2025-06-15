@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center px-6 relative z-10">
+    <section className="min-h-screen flex items-center px-4 sm:px-6 relative z-10">
       <div className="floating-dots">
         <div className="dot dot-1"></div>
         <div className="dot dot-2"></div>
@@ -27,66 +27,71 @@ const HeroSection = () => {
       </div>
       
       <div className="max-w-6xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div>
+          <div className="text-center lg:text-left">
             <div className="mb-4">
-              <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+              <span className="px-3 py-2 sm:px-4 bg-purple-100 text-purple-700 rounded-full text-xs sm:text-sm font-medium">
                 👋 Product Manager & Builder
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-gray-900">
               Hello, I'm{" "}
               <span className="block text-pink-500">Sai Iyer</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-900 mb-6 leading-relaxed font-semibold">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-900 mb-4 sm:mb-6 leading-relaxed font-semibold px-2 lg:px-0">
               Product Manager building products with <span className="text-pink-600 font-bold">empathy</span> and <span className="text-green-600 font-bold">impact</span>. 
             </p>
             
-            <p className="text-lg text-gray-800 mb-8 font-semibold">
+            <p className="text-base sm:text-lg text-gray-800 mb-6 sm:mb-8 font-semibold px-2 lg:px-0">
               Blending curiosity, data, and AI to build products users love.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-12 px-2 lg:px-0">
               <Button 
-                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group"
+                className="bg-purple-600 hover:bg-purple-700 text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 group w-full sm:w-auto"
                 onClick={() => scrollToSection('what-i-do')}
               >
                 Learn My Story
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
 
             {/* Contact Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start px-2 lg:px-0">
               <Button 
                 variant="outline" 
-                className="gap-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+                className="gap-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:scale-105 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3"
               >
-                <Mail size={18} />
-                <a href="mailto:iyersai24@gmail.com">Email</a>
+                <Mail size={16} className="sm:hidden" />
+                <Mail size={18} className="hidden sm:block" />
+                <a href="mailto:iyersai24@gmail.com" className="hidden sm:inline">Email</a>
+                <a href="mailto:iyersai24@gmail.com" className="sm:hidden">Mail</a>
               </Button>
               <Button 
                 variant="outline" 
-                className="gap-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+                className="gap-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:scale-105 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3"
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} className="sm:hidden" />
+                <Linkedin size={18} className="hidden sm:block" />
                 <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </Button>
               <Button 
-                className="gap-2 bg-green-500 hover:bg-green-600 text-white transition-all duration-300 hover:scale-105"
+                className="gap-2 bg-green-500 hover:bg-green-600 text-white transition-all duration-300 hover:scale-105 text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3"
               >
-                <Download size={18} />
-                <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>Download CV</a>
+                <Download size={16} className="sm:hidden" />
+                <Download size={18} className="hidden sm:block" />
+                <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download className="hidden sm:inline">Download CV</a>
+                <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download className="sm:hidden">CV</a>
               </Button>
             </div>
           </div>
 
           {/* Right Illustration */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative max-w-sm w-full">
+          <div className="flex justify-center lg:justify-end mt-8 lg:mt-0 order-first lg:order-last">
+            <div className="relative max-w-xs sm:max-w-sm w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
               <img 

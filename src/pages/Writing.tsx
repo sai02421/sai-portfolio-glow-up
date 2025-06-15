@@ -27,10 +27,10 @@ const Writing = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">⚙️ UX Breakdowns & Everyday Product Thinking</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">⚙️ UX Breakdowns & Everyday Product Thinking</h1>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             Real-world UX, written like a PM. I break down how the products we use daily are designed — and what they get right (or don't). View more on my{" "}
             <a 
               href="https://linkedin.com/in/sai-iyer-9b4b8b1b5" 
@@ -44,27 +44,28 @@ const Writing = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
             <a
               key={index}
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="section-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer block group relative"
+              className="section-card p-6 sm:p-8 hover:scale-105 transition-all duration-300 cursor-pointer block group relative"
             >
-              <div className="absolute top-6 right-6 text-2xl">
+              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-xl sm:text-2xl">
                 {post.emoji}
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 text-gray-900 pr-8">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-900 pr-8">
                 {post.title}
               </h3>
-              <p className="mb-4 leading-relaxed text-gray-600">
+              <p className="mb-4 leading-relaxed text-gray-600 text-sm sm:text-base">
                 {post.description}
               </p>
               <div className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700">
-                <ExternalLink size={16} />
+                <ExternalLink size={14} className="sm:hidden" />
+                <ExternalLink size={16} className="hidden sm:block" />
               </div>
             </a>
           ))}
