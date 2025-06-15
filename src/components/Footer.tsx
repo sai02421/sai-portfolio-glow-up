@@ -20,10 +20,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-fredoka font-bold text-light-gray">
+            <h3 className="text-2xl font-poppins font-bold text-light-gray">
               Sai Iyer
             </h3>
-            <p className="text-light-gray/80 max-w-sm font-source-sans">
+            <p className="text-light-gray/80 max-w-sm">
               Product Manager building products with empathy and impact. 
               Blending curiosity, data, and AI to build products users love.
             </p>
@@ -31,31 +31,31 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-fredoka font-semibold text-light-gray">
+            <h4 className="text-lg font-poppins font-semibold text-light-gray">
               Navigation
             </h4>
             <div className="flex flex-col space-y-2">
               <Link 
                 to="/projects" 
-                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300 text-link"
+                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 Projects
               </Link>
               <Link 
                 to="/about" 
-                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300 text-link"
+                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 About
               </Link>
               <Link 
                 to="/writing" 
-                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300 text-link"
+                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 Writing
               </Link>
               <Link 
                 to="/contact" 
-                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300 text-link"
+                className="text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 Contact
               </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
           
           {/* Contact & Social */}
           <div className="space-y-4">
-            <h4 className="text-lg font-fredoka font-semibold text-light-gray">
+            <h4 className="text-lg font-poppins font-semibold text-light-gray">
               Connect
             </h4>
             <div className="space-y-3">
@@ -73,14 +73,14 @@ const Footer = () => {
                 className="flex items-center space-x-2 text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 <Mail size={16} />
-                <span className="font-source-sans">iyersai24@gmail.com</span>
+                <span>iyersai24@gmail.com</span>
               </button>
               <button 
                 onClick={handleLinkedInClick}
                 className="flex items-center space-x-2 text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 <Linkedin size={16} />
-                <span className="font-source-sans">LinkedIn Profile</span>
+                <span>LinkedIn Profile</span>
               </button>
               <a 
                 href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" 
@@ -88,7 +88,7 @@ const Footer = () => {
                 className="flex items-center space-x-2 text-light-gray/80 hover:text-digital-lavender transition-colors duration-300"
               >
                 <Download size={16} />
-                <span className="font-source-sans">Download CV</span>
+                <span>Download CV</span>
               </a>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				// New Aesthetic Pastel Design System Colors
+				// Design System Colors
 				'navy-blue': 'rgb(var(--navy-blue) / <alpha-value>)',
 				'earthen-luxe': 'rgb(var(--earthen-luxe) / <alpha-value>)',
 				'dark-green': 'rgb(var(--dark-green) / <alpha-value>)',
@@ -87,60 +87,22 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(10px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
-					}
-				},
-				'fade-in-up': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(20px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
-				},
-				'typewriter': {
-					'0%': {
-						width: '0'
-					},
-					'100%': {
-						width: '100%'
-					}
-				},
-				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0px)'
-					},
-					'50%': {
-						transform: 'translateY(-10px)'
-					}
-				},
-				'glow': {
-					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(167, 139, 250, 0.3)'
-					},
-					'50%': {
-						boxShadow: '0 0 30px rgba(167, 139, 250, 0.5)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'fade-in-up': 'fade-in-up 0.5s ease-out',
-				'typewriter': 'typewriter 3s steps(50) 1s both',
-				'float': 'float 3s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite alternate'
+				'fade-in': 'fade-in 0.5s ease-out'
 			},
 			fontFamily: {
-				'fredoka': ['Fredoka One', 'cursive'],
-				'source-sans': ['Source Sans Pro', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			maxWidth: {
 				'container': '1280px',

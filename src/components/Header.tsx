@@ -23,7 +23,7 @@ const Header = () => {
       <div className="container-max h-full flex items-center justify-between">
         {/* Logo/Name */}
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-fredoka font-bold text-light-gray">
+          <span className="text-2xl font-poppins font-bold text-navy-blue">
             Sai Iyer
           </span>
         </Link>
@@ -34,7 +34,7 @@ const Header = () => {
             <Link 
               key={link.name}
               to={link.href}
-              className={`text-light-gray hover:text-digital-lavender transition-colors duration-300 font-semibold text-link ${
+              className={`text-dark-green hover:text-digital-lavender transition-colors duration-300 font-medium ${
                 location.pathname === link.href ? 'text-digital-lavender' : ''
               }`}
             >
@@ -52,7 +52,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2 text-light-gray hover:text-digital-lavender transition-colors"
+          className="md:hidden p-2 text-navy-blue hover:text-digital-lavender transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -61,14 +61,14 @@ const Header = () => {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-navy-blue border-t border-light-gray/10 shadow-lg">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-earthen-luxe border-t border-dark-green/10 shadow-lg">
           <div className="container-max py-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link 
                   key={link.name}
                   to={link.href}
-                  className={`text-light-gray hover:text-digital-lavender transition-colors duration-300 font-semibold py-2 text-link ${
+                  className={`text-dark-green hover:text-digital-lavender transition-colors duration-300 font-medium py-2 ${
                     location.pathname === link.href ? 'text-digital-lavender' : ''
                   }`}
                   onClick={() => setMobileMenuOpen(false)}

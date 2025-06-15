@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,11 +15,11 @@
     --popover: 255 255 255;
     --popover-foreground: 0 0 0;
     
-    /* Updated Aesthetic Pastel Design System Colors */
+    /* Updated Design System Colors */
     --primary: 34 51 59; /* Navy Blue #22333B */
     --primary-foreground: 237 244 242; /* Light Gray #EDF4F2 */
     --secondary: 234 224 213; /* Earthen Luxe #EAE0D5 */
-    --secondary-foreground: 49 71 58; /* Dark Green #31473A */
+    --secondary-foreground: 49 71 58; /* Dark Gray #31473A */
     --accent: 167 139 250; /* Digital Lavender #A78BFA */
     --accent-foreground: 49 71 58;
     --muted: 234 224 213; /* Earthen Luxe */
@@ -46,7 +46,7 @@
   }
 
   body {
-    @apply bg-earthen-luxe text-dark-green font-source-sans;
+    @apply bg-earthen-luxe text-dark-green font-inter;
     background: rgb(234, 224, 213);
     min-height: 100vh;
     color: rgb(49, 71, 58);
@@ -58,33 +58,33 @@
     scroll-behavior: smooth;
   }
 
-  /* Typography System - Fredoka One + Source Sans Pro */
+  /* Typography System */
   h1 {
-    font-family: 'Fredoka One', cursive;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 1.1;
-    color: rgb(49, 71, 58);
-  }
-
-  h2 {
-    font-family: 'Fredoka One', cursive;
-    font-weight: 400;
-    font-size: 54px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
     line-height: 1.2;
     color: rgb(49, 71, 58);
   }
 
-  h3 {
-    font-family: 'Fredoka One', cursive;
-    font-weight: 400;
-    font-size: 28px;
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
     line-height: 1.3;
     color: rgb(49, 71, 58);
   }
 
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    color: rgb(49, 71, 58);
+  }
+
   p {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
@@ -94,15 +94,15 @@
   /* Mobile Typography */
   @media (max-width: 768px) {
     h1 {
-      font-size: 44px;
+      font-size: 40px;
     }
 
     h2 {
-      font-size: 36px;
+      font-size: 32px;
     }
 
     h3 {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     p, body {
@@ -112,21 +112,20 @@
 
   /* Links */
   a {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     color: rgb(167, 139, 250);
     text-decoration: none;
     transition: all 0.3s ease;
-    position: relative;
   }
 
   a:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   /* Caption/Meta Text */
   .caption {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
@@ -140,82 +139,48 @@
   }
 }
 
+/* Remove old gradient animation and floating dots */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer components {
   /* Global Component Styles */
   .btn-primary {
-    @apply bg-navy-blue text-light-gray px-6 py-3 rounded-lg font-semibold transition-all duration-300;
-    font-family: 'Source Sans Pro', sans-serif;
+    @apply bg-navy-blue text-light-gray px-6 py-3 rounded-lg font-medium transition-all duration-300;
     border-radius: 8px;
     padding: 12px 24px;
-    position: relative;
-    overflow: hidden;
   }
 
   .btn-primary:hover {
-    @apply transform scale-105;
-    box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
+    @apply bg-digital-lavender text-dark-green transform scale-105;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-dark-green text-dark-green px-6 py-3 rounded-lg font-semibold transition-all duration-300;
-    font-family: 'Source Sans Pro', sans-serif;
+    @apply bg-transparent border-2 border-navy-blue text-navy-blue px-6 py-3 rounded-lg font-medium transition-all duration-300;
     border-radius: 8px;
     padding: 12px 24px;
   }
 
   .btn-secondary:hover {
-    @apply bg-dark-green text-earthen-luxe;
+    @apply bg-navy-blue text-light-gray;
   }
 
   /* Card Styles */
   .card {
     @apply bg-white border border-border rounded-2xl p-8 shadow-sm transition-all duration-300;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
   }
 
   .card:hover {
     @apply shadow-lg transform -translate-y-1;
-  }
-
-  /* Project Card Hover Effects */
-  .project-card {
-    @apply relative overflow-hidden rounded-2xl transition-all duration-300 cursor-pointer;
-    border-radius: 16px;
-  }
-
-  .project-card:hover {
-    @apply transform -translate-y-2;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  .project-card:hover .project-overlay {
-    @apply opacity-100;
-  }
-
-  .project-overlay {
-    @apply absolute inset-0 bg-dark-green bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300;
-  }
-
-  /* Text Link Hover Effects */
-  .text-link {
-    @apply relative;
-  }
-
-  .text-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: rgb(167, 139, 250);
-    transition: width 0.3s ease-in-out;
-  }
-
-  .text-link:hover::after {
-    width: 100%;
   }
 
   /* Image Styles */
@@ -231,6 +196,12 @@
   }
 
   /* Grid System */
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+
   .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -238,12 +209,20 @@
     padding: 32px 0;
   }
 
+  /* Spacing System (8px scale) */
+  .spacing-xs { margin: 8px; }
+  .spacing-sm { margin: 16px; }
+  .spacing-md { margin: 24px; }
+  .spacing-lg { margin: 32px; }
+  .spacing-xl { margin: 40px; }
+  .spacing-2xl { margin: 48px; }
+
   /* Header Styles */
   .header-sticky {
     position: sticky;
     top: 0;
     height: 80px;
-    background: rgb(34, 51, 59);
+    background: rgba(234, 224, 213, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(49, 71, 58, 0.1);
     z-index: 50;
@@ -251,30 +230,27 @@
 
   /* Footer Styles */
   .footer-dark {
-    background: rgb(34, 51, 59);
+    background: rgb(49, 71, 58);
     color: rgb(237, 244, 242);
   }
 
   /* Animation Classes */
-  @media (prefers-reduced-motion: no-preference) {
-    .animate-fade-in-up {
-      animation: fade-in-up 0.5s ease-out;
-    }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
 
-    .animate-stagger-1 {
-      animation: fade-in-up 0.5s ease-out 0.1s both;
-    }
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
 
-    .animate-stagger-2 {
-      animation: fade-in-up 0.5s ease-out 0.2s both;
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
     }
-
-    .animate-stagger-3 {
-      animation: fade-in-up 0.5s ease-out 0.3s both;
-    }
-
-    .animate-stagger-4 {
-      animation: fade-in-up 0.5s ease-out 0.4s both;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -300,50 +276,5 @@
 
   .bg-accent-section {
     background: rgba(167, 139, 250, 0.05);
-  }
-
-  /* Abstract Shapes Animation */
-  .floating-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .shape {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .shape-1 {
-    width: 100px;
-    height: 100px;
-    background: rgb(167, 139, 250);
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-  }
-
-  .shape-2 {
-    width: 150px;
-    height: 150px;
-    background: rgb(49, 71, 58);
-    top: 60%;
-    right: 20%;
-    animation-delay: 2s;
-  }
-
-  .shape-3 {
-    width: 80px;
-    height: 80px;
-    background: rgb(34, 51, 59);
-    bottom: 20%;
-    left: 60%;
-    animation-delay: 4s;
   }
 }
