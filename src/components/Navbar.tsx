@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Mail, Linkedin } from "lucide-react";
@@ -34,12 +35,12 @@ const Navbar = () => {
         <div className="dot dot-5"></div>
       </div>
 
-      <nav className="fixed top-3 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] sm:w-auto max-w-[600px]">
-        <div className="floating-nav px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between min-w-0 sm:min-w-[600px]">
+      <nav className="fixed top-2 sm:top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[96%] sm:w-[90%] md:w-auto max-w-[600px]">
+        <div className="floating-nav px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gray-900 flex items-center justify-center">
-              <span className="text-pink-500 font-bold text-base sm:text-lg">SI</span>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg bg-gray-900 flex items-center justify-center">
+              <span className="text-pink-500 font-bold text-sm sm:text-base md:text-lg">SI</span>
             </div>
           </Link>
           
@@ -83,19 +84,21 @@ const Navbar = () => {
             </HoverCard>
           </div>
 
-          {/* Download CV Button */}
-          <div className="hidden md:block">
+          {/* Download CV Button - Hidden on small mobile, visible on larger screens */}
+          <div className="hidden sm:block md:block">
             <a href="https://drive.google.com/uc?export=download&id=1O3mHrKLfLrvw7jFCvF4_JtXORwY7Ebf_" download>
-              <Button className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-full transition-all duration-300 hover:scale-105">
-                <Download size={16} className="mr-2" />
-                Download CV
+              <Button className="bg-green-500 hover:bg-green-600 text-white text-xs sm:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105">
+                <Download size={14} className="sm:hidden mr-1" />
+                <Download size={16} className="hidden sm:block mr-2" />
+                <span className="hidden sm:inline">Download CV</span>
+                <span className="sm:hidden">CV</span>
               </Button>
             </a>
           </div>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
