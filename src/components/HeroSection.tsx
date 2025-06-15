@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Mail, Download, Linkedin, ArrowRight } from "lucide-react";
 
@@ -89,9 +90,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Illustration */}
+          {/* Right Illustration - Smaller profile picture */}
           <div className="flex justify-center lg:justify-end mt-8 lg:mt-0 order-first lg:order-last">
-            <div className="relative max-w-xs sm:max-w-sm w-full">
+            <div className="relative max-w-[250px] sm:max-w-[280px] md:max-w-xs w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
               <img 
