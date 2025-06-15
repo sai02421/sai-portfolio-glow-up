@@ -1,8 +1,26 @@
 
 import { Button } from "@/components/ui/button";
 import { Mail, Download, Linkedin, ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "I'm Sai Iyer, a Product Manager who turns ideas into high-impact products. From AI chatbots that boost retention by 15% to e-commerce redesigns that lift conversion by 10%, I specialize in building solutions that drive growth.";
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 50);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -19,38 +37,36 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-earthen-luxe">
-      <div className="container-max w-full">
+    <section className="min-h-screen flex items-center bg-earthen-luxe relative overflow-hidden">
+      {/* Floating Abstract Shapes */}
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
+
+      <div className="container-max w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-full border border-dark-green/10">
                 <span className="text-2xl">👋</span>
-                <span className="caption font-medium text-dark-green">Product Manager & Builder</span>
+                <span className="caption font-semibold text-dark-green">Product Manager & Builder</span>
               </div>
               
-              <h1 className="text-navy-blue">
-                Hello, I'm{" "}
-                <span className="block text-digital-lavender">Sai Iyer</span>
-              </h1>
-              
-              <p className="text-xl text-dark-green font-medium max-w-xl">
-                Product Manager building products with{" "}
-                <span className="text-digital-lavender font-bold">empathy</span> and{" "}
-                <span className="text-navy-blue font-bold">impact</span>.
-              </p>
-              
-              <p className="text-dark-green/80 max-w-xl">
-                Blending curiosity, data, and AI to build products users love. 
-                I help teams discover, validate, and launch digital experiences that make a difference.
-              </p>
+              <div className="min-h-[200px]">
+                <h1 className="text-dark-green leading-tight">
+                  {displayText}
+                  <span className="animate-pulse">|</span>
+                </h1>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 className="btn-primary group"
-                onClick={() => scrollToSection('what-i-do')}
+                onClick={() => scrollToSection('my-journey')}
               >
                 View My Work
                 <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
@@ -93,7 +109,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center lg:justify-end animate-slide-up">
+          <div className="flex justify-center lg:justify-end animate-fade-in-up animate-stagger-2">
             <div className="relative max-w-sm w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-digital-lavender/20 to-navy-blue/20 rounded-2xl transform rotate-6 opacity-60"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/20 to-digital-lavender/20 rounded-2xl transform -rotate-3 opacity-60"></div>
