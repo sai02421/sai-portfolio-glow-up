@@ -23,14 +23,14 @@ const ModernHero = () => {
               </div>
               
               <div className="space-y-2 lg:space-y-4">
-                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-[#CDB4DB] leading-tight">
-                  Product Manager, Builder & Creative Problem Solver
+                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-dark-green leading-tight">
+                  Product Manager, <span className="text-[#CDB4DB]">Builder</span> & <span className="text-[#CDB4DB]">Creative Problem Solver</span>
                 </h1>
               </div>
               
               <p className="text-base lg:text-lg text-dark-green max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">
                 I design digital experiences that feel effortless and perform brilliantly — blending{" "}
-                <span className="text-[#8B5CF6] font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
+                <span className="text-[#2F3E46] font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
               </p>
               
               <p className="text-dark-green/80 max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">

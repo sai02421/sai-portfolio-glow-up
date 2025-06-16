@@ -29,46 +29,38 @@ const Writing = () => {
     <div className="min-h-screen bg-earthen-luxe page-transition">
       <ModernHeader />
       <div className="container-max pt-24 sm:pt-32 pb-16 sm:pb-20">
-        <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display text-navy-blue mb-4">⚙️ UX Breakdowns & Everyday Product Thinking</h1>
-          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto px-4 sm:px-0 font-body">
-            Real-world UX, written like a PM. I break down how the products we use daily are designed — and what they get right (or don't). View more on my{" "}
-            <a 
-              href="https://linkedin.com/in/sai-iyer-9b4b8b1b5" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#A3C4F3] hover:text-[#CDB4DB] underline"
-            >
-              LinkedIn
-            </a>
-            .
+        <div className="text-center mb-16">
+          <h2 className="font-fredoka text-navy-blue mb-4">
+            Blogs & Teardowns
+          </h2>
+          <p className="text-dark-green font-source-sans max-w-2xl mx-auto">
+            Deep dives into product strategy, UX analysis, and what makes great products tick.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
-            <a
-              key={index}
-              href={post.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-xl shadow-md p-6 sm:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer block group relative"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {blogPosts.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate-fade-in-up group cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-xl sm:text-2xl">
-                {post.emoji}
-              </div>
-              
-              <h3 className="text-lg sm:text-xl font-display text-navy-blue mb-3 pr-8 group-hover:text-[#CDB4DB] transition-colors">
-                {post.title}
+              <div className="text-4xl mb-4">{item.emoji}</div>
+              <h3 className="font-fredoka text-navy-blue mb-3">
+                {item.title}
               </h3>
-              <p className="mb-4 leading-relaxed text-dark-green text-sm sm:text-base font-body">
-                {post.description}
+              <p className="text-dark-green font-source-sans mb-4 leading-relaxed">
+                {item.description}
               </p>
-              <div className="inline-flex items-center gap-2 text-[#A3C4F3] font-medium hover:text-[#CDB4DB] transition-colors">
-                <ExternalLink size={14} className="sm:hidden" />
-                <ExternalLink size={16} className="hidden sm:block" />
-              </div>
-            </a>
+              <a 
+                href={item.link} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link text-digital-lavender font-source-sans font-semibold inline-flex items-center group-hover:translate-x-1 transition-transform"
+              >
+                Read Teardown →
+              </a>
+            </div>
           ))}
         </div>
       </div>

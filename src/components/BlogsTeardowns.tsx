@@ -2,22 +2,22 @@
 const BlogsTeardowns = () => {
   const teardowns = [
     {
-      logo: "🎵",
-      title: "Spotify's Onboarding Flow: A Deep Dive",
-      summary: "Analyzing how Spotify's music preference algorithm creates personalized experiences from day one, driving 40% higher engagement.",
-      link: "#"
+      logo: "💳",
+      title: "Same UPI. Different UX.",
+      summary: "Why GPay feels effortless for P2P and PhonePe dominates for P2M. A UX breakdown of intent vs interface.",
+      link: "https://www.linkedin.com/posts/-sai-iyer_ux-productdesign-googlepay-activity-7337418119709134849-mWuZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
+    },
+    {
+      logo: "📺",
+      title: "Lean-back vs Lean-in.",
+      summary: "Netflix plays to emotion, Prime plays to control. A UX teardown on how small decisions create binge-worthy experiences.",
+      link: "https://www.linkedin.com/posts/-sai-iyer_ux-usercentricdesign-netflix-activity-7338048523793248257-RRB1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
     },
     {
       logo: "🦉",
-      title: "Duolingo's Gamification Strategy",
-      summary: "Breaking down the psychology behind streaks, XP systems, and how Duolingo maintains 90-day retention rates above 25%.",
-      link: "#"
-    },
-    {
-      logo: "📱",
-      title: "Instagram Stories: UX Teardown",
-      summary: "Exploring how Instagram's Stories feature revolutionized social sharing and increased daily active users by 300M+.",
-      link: "#"
+      title: "Still going after 384 days.",
+      summary: "How Duolingo designs for forgiveness, progress, and behavior — not pressure. A breakdown of habit-safe UX.",
+      link: "https://www.linkedin.com/posts/-sai-iyer_productdesign-ux-behavioraldesign-activity-7338769550655533056-xW0t?utm_source=share&utm_medium=member_desktop&rcm=ACoAADC7KwUBouwQyjYAsrgN3f3uuON5slQe0w4"
     }
   ];
 
@@ -49,6 +49,8 @@ const BlogsTeardowns = () => {
               </p>
               <a 
                 href={item.link} 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-link text-digital-lavender font-source-sans font-semibold inline-flex items-center group-hover:translate-x-1 transition-transform"
               >
                 Read Teardown →

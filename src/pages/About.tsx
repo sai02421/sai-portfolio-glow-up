@@ -8,6 +8,15 @@ const About = () => {
     <div className="min-h-screen bg-earthen-luxe page-transition">
       <ModernHeader />
       <div className="container-max pt-24 sm:pt-32 pb-16 sm:pb-20">
+        <div className="text-center mb-16">
+          <h2 className="font-fredoka text-navy-blue mb-4">
+            About Me
+          </h2>
+          <p className="text-dark-green font-source-sans max-w-2xl mx-auto">
+            A Product Manager with a builder's mindset and a user-first approach.
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Image */}
           <div className="flex justify-center lg:justify-start">
@@ -24,33 +33,30 @@ const About = () => {
 
           {/* Right Column - Content */}
           <div className="space-y-6 lg:space-y-8">
-            <div>
-              <h1 className="text-3xl lg:text-4xl font-display text-navy-blue mb-4 sm:mb-6 text-center lg:text-left">About Me</h1>
-              <div className="space-y-4 sm:space-y-6 text-dark-green font-body">
-                <p className="text-base sm:text-lg leading-relaxed">
-                  Hey, I'm <span className="text-[#CDB4DB] font-bold">Sai</span> — a Product Manager with a builder's mindset and a user-first approach.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed">
-                  My career started on the race track — literally — as part of a Formula Student team in college. But soon, I found myself more fascinated by user journeys than vehicle aerodynamics. That curiosity drove me into the world of digital products.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed">
-                  Since then, I've built and launched products in ed-tech and D2C e-commerce, working across AI chatbots, retention systems, onboarding flows, and partner-facing dashboards. I enjoy the messy middle of product building — where insights, design, and strategy collide to create experiences that stick.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed">
-                  I love collaborating with cross-functional teams, diving into metrics, and iterating fast. Whether it's 0→1 MVPs or optimization experiments, I thrive when I'm solving real user problems that impact growth.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed">
-                  Outside of work, I enjoy playing pickleball, geeking out on mythology, and helping founders validate ideas and launch with speed.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed font-semibold">
-                  Let's build something meaningful 🚀
-                </p>
-              </div>
+            <div className="space-y-4 sm:space-y-6 text-dark-green font-body">
+              <p className="text-base sm:text-lg leading-relaxed">
+                Hey, I'm <span className="text-[#CDB4DB] font-bold">Sai</span> — a Product Manager with a builder's mindset and a user-first approach.
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed">
+                My career started on the race track — literally — as part of a Formula Student team in college. But soon, I found myself more fascinated by user journeys than vehicle aerodynamics. That curiosity drove me into the world of digital products.
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed">
+                Since then, I've built and launched products in ed-tech and D2C e-commerce, working across AI chatbots, retention systems, onboarding flows, and partner-facing dashboards. I enjoy the messy middle of product building — where insights, design, and strategy collide to create experiences that stick.
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed">
+                I love collaborating with cross-functional teams, diving into metrics, and iterating fast. Whether it's 0→1 MVPs or optimization experiments, I thrive when I'm solving real user problems that impact growth.
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed">
+                Outside of work, I enjoy playing pickleball, geeking out on mythology, and helping founders validate ideas and launch with speed.
+              </p>
+              
+              <p className="text-base sm:text-lg leading-relaxed font-semibold">
+                Let's build something meaningful 🚀
+              </p>
             </div>
           </div>
         </div>
