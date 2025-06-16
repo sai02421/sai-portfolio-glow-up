@@ -63,6 +63,8 @@ export default {
 				},
 			},
 			fontFamily: {
+				'display': ['"Baloo 2"', 'cursive'],
+				'body': ['"Poppins"', 'sans-serif'],
 				'fredoka': ['Fredoka One', 'cursive'],
 				'source-sans': ['Source Sans Pro', 'sans-serif'],
 			},

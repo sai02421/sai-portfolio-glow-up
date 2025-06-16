@@ -19,12 +19,12 @@ const ModernHeader = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
+    { name: "Blogs", href: "/writing" },
     { name: "About", href: "/about" },
   ];
 
   const handleEmailClick = () => {
     navigator.clipboard.writeText("iyersai24@gmail.com");
-    // Show a brief confirmation - could be enhanced with toast
     alert("Email copied to clipboard!");
   };
 
@@ -38,7 +38,7 @@ const ModernHeader = () => {
         <div className="container-max h-full flex items-center justify-between">
           {/* Logo/Name */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-fredoka font-bold text-light-gray">
+            <span className="text-2xl font-display font-bold text-[#CDB4DB]">
               Sai Iyer
             </span>
           </Link>
@@ -49,8 +49,8 @@ const ModernHeader = () => {
               <Link 
                 key={link.name}
                 to={link.href}
-                className={`text-light-gray hover:text-digital-lavender transition-colors duration-300 font-semibold ${
-                  location.pathname === link.href ? 'text-digital-lavender' : ''
+                className={`text-light-gray hover:text-[#CDB4DB] transition-colors duration-300 font-semibold ${
+                  location.pathname === link.href ? 'text-[#CDB4DB]' : ''
                 }`}
               >
                 {link.name}
@@ -59,13 +59,13 @@ const ModernHeader = () => {
             
             <Dialog open={contactModalOpen} onOpenChange={setContactModalOpen}>
               <DialogTrigger asChild>
-                <Button className="btn-primary">
+                <Button className="bg-[#FFDEB4] hover:bg-[#FFD199] text-[#3E2C1C] rounded-lg px-4 py-2 font-medium shadow-sm transition">
                   Contact
                 </Button>
               </DialogTrigger>
               <DialogContent className="bg-navy-blue border-digital-lavender max-w-md">
                 <DialogHeader>
-                  <DialogTitle className="text-light-gray text-center text-2xl font-fredoka">
+                  <DialogTitle className="text-light-gray text-center text-2xl font-display">
                     Get in Touch
                   </DialogTitle>
                 </DialogHeader>
@@ -91,7 +91,7 @@ const ModernHeader = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-light-gray hover:text-digital-lavender transition-colors"
+            className="md:hidden p-2 text-light-gray hover:text-[#CDB4DB] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -107,8 +107,8 @@ const ModernHeader = () => {
                   <Link 
                     key={link.name}
                     to={link.href}
-                    className={`text-light-gray hover:text-digital-lavender transition-colors duration-300 font-semibold py-2 ${
-                      location.pathname === link.href ? 'text-digital-lavender' : ''
+                    className={`text-light-gray hover:text-[#CDB4DB] transition-colors duration-300 font-semibold py-2 ${
+                      location.pathname === link.href ? 'text-[#CDB4DB]' : ''
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -118,14 +118,14 @@ const ModernHeader = () => {
                 <div className="pt-4 border-t border-light-gray/20 space-y-3">
                   <button 
                     onClick={handleEmailClick}
-                    className="w-full flex items-center space-x-3 text-light-gray hover:text-digital-lavender transition-colors py-2"
+                    className="w-full flex items-center space-x-3 text-light-gray hover:text-[#CDB4DB] transition-colors py-2"
                   >
                     <Mail size={20} />
                     <span>Copy Email</span>
                   </button>
                   <button 
                     onClick={handleLinkedInClick}
-                    className="w-full flex items-center space-x-3 text-light-gray hover:text-digital-lavender transition-colors py-2"
+                    className="w-full flex items-center space-x-3 text-light-gray hover:text-[#CDB4DB] transition-colors py-2"
                   >
                     <Linkedin size={20} />
                     <span>LinkedIn</span>
