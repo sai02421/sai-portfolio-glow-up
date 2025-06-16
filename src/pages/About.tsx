@@ -1,6 +1,7 @@
 
 import ModernHeader from "@/components/ModernHeader";
 import ModernFooter from "@/components/ModernFooter";
+import SkillsSection from "@/components/SkillsSection";
 
 const About = () => {
   return (
@@ -54,6 +55,10 @@ const About = () => {
           </div>
         </div>
       </div>
+      
+      {/* Skills Section */}
+      <SkillsSection />
+      
       <ModernFooter />
     </div>
   );

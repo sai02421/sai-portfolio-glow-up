@@ -38,7 +38,7 @@ const SkillsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-xl font-display mb-4 text-[#CDB4DB] flex items-center gap-2">
+              <h3 className="text-xl font-display mb-4 text-[#2F3E46] flex items-center gap-2">
                 <span className="text-2xl">{category.emoji}</span>
                 {category.title}
               </h3>

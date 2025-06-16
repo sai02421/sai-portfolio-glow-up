@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 
 const ModernHero = () => {
   const scrollToNextSection = () => {
-    const element = document.getElementById('experience-journey');
+    const element = document.getElementById('what-i-do');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -23,7 +23,7 @@ const ModernHero = () => {
               </div>
               
               <div className="space-y-2 lg:space-y-4">
-                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-navy-blue leading-tight">
+                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-[#2F3E46] leading-tight">
                   Product Manager, Builder & Creative Problem Solver
                 </h1>
               </div>
@@ -43,7 +43,7 @@ const ModernHero = () => {
                 className="bg-[#FCD5CE] hover:bg-[#F8AFA6] text-[#4B3F3F] rounded-lg px-4 py-2 font-medium shadow-sm transition group"
                 onClick={scrollToNextSection}
               >
-                👉 View My Work
+                View My Work
               </Button>
               
               <a 
@@ -54,7 +54,7 @@ const ModernHero = () => {
                   className="bg-[#D8E2DC] hover:bg-[#BFD8CC] text-[#2F3E46] rounded-lg px-4 py-2 font-medium shadow-sm transition w-full"
                 >
                   <Download className="mr-2 h-4 w-4" />
-                  👉 My CV
+                  My CV
                 </Button>
               </a>
             </div>
@@ -62,7 +62,7 @@ const ModernHero = () => {
 
           {/* Right Image */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative max-w-sm w-full">
+            <div className="relative max-w-xs sm:max-w-sm w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-[#CDB4DB]/20 to-navy-blue/20 rounded-2xl transform rotate-6 opacity-60"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/20 to-[#A3C4F3]/20 rounded-2xl transform -rotate-3 opacity-60"></div>
               <img 
