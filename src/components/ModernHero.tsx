@@ -17,14 +17,14 @@ const ModernHero = () => {
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
             <div className="space-y-4 lg:space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-white/80 px-4 py-2 rounded-full border border-dark-green/10">
-                <span className="text-xl lg:text-2xl">👋</span>
-                <span className="text-sm lg:text-base font-medium text-dark-green font-body">Hi, I'm Sai Iyer</span>
+              <div className="inline-flex items-center space-x-2 bg-white/80 px-5 py-3 rounded-full border border-dark-green/10">
+                <span className="text-2xl lg:text-3xl">👋</span>
+                <span className="text-base lg:text-lg font-medium text-dark-green font-body">Hi, I'm Sai Iyer</span>
               </div>
               
               <div className="space-y-2 lg:space-y-4">
                 <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-dark-green leading-tight">
-                  Product Manager, <span className="text-[#CDB4DB]">Builder</span> & <span className="text-[#CDB4DB]">Creative Problem Solver</span>
+                  Product Manager, <span className="text-[#2F3E46]">Builder</span> & <span className="text-[#2F3E46]">Creative Problem Solver</span>
                 </h1>
               </div>
               
@@ -38,7 +38,7 @@ const ModernHero = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 sm:mb-0">
               <Button 
                 className="bg-[#FCD5CE] hover:bg-[#F8AFA6] text-[#4B3F3F] rounded-lg px-4 py-2 font-medium shadow-sm transition group"
                 onClick={scrollToNextSection}

@@ -145,9 +145,11 @@ const Projects = () => {
     <div className="min-h-screen bg-earthen-luxe page-transition">
       <ModernHeader />
       <div className="container-max pt-24 sm:pt-32 pb-16 sm:pb-20">
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl lg:text-4xl font-display text-navy-blue mb-4 sm:mb-6">My Projects</h1>
-          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto font-body">
+        <div className="text-center mb-16">
+          <h2 className="font-fredoka text-navy-blue mb-4">
+            My Projects
+          </h2>
+          <p className="text-dark-green font-source-sans max-w-2xl mx-auto">
             Real-world product management work with measurable outcomes and business impact.
           </p>
         </div>
