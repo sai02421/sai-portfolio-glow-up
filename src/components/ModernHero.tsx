@@ -17,20 +17,20 @@ const ModernHero = () => {
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1 mb-16 sm:mb-0">
             <div className="space-y-4 lg:space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-white/80 px-5 py-3 rounded-full border border-dark-green/10">
+              <div className="inline-flex items-center space-x-2 bg-white/80 px-6 py-3 rounded-full border border-dark-green/10">
                 <span className="text-2xl lg:text-3xl">👋</span>
-                <span className="text-base lg:text-lg font-medium text-dark-green font-body">Hi, I'm Sai Iyer</span>
+                <span className="text-lg lg:text-xl font-medium text-dark-green font-body">Hi, I'm Sai Iyer</span>
               </div>
               
               <div className="space-y-2 lg:space-y-4">
                 <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-dark-green leading-tight">
-                  Product Manager, <span className="text-[#2F3E46]">Builder</span> & <span className="text-[#2F3E46]">Creative Problem Solver</span>
+                  Product Manager, <span className="text-digital-lavender">Builder</span> & <span className="text-digital-lavender">Creative Problem Solver</span>
                 </h1>
               </div>
               
               <p className="text-base lg:text-lg text-dark-green max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">
                 I design digital experiences that feel effortless and perform brilliantly — blending{" "}
-                <span className="text-[#2F3E46] font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
+                <span className="text-digital-lavender font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
               </p>
               
               <p className="text-dark-green/80 max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">

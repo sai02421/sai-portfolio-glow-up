@@ -75,7 +75,7 @@ const ModernHeader = () => {
                     className="w-full p-6 bg-transparent border-2 border-light-gray text-light-gray rounded-lg hover:bg-light-gray hover:text-navy-blue transition-all duration-300 flex items-center justify-center space-x-3"
                   >
                     <Mail size={24} />
-                    <span className="font-semibold">Copy Email Address</span>
+                    <span className="font-semibold">Email</span>
                   </button>
                   <button 
                     onClick={handleLinkedInClick}
@@ -121,7 +121,7 @@ const ModernHeader = () => {
                     className="w-full flex items-center space-x-3 text-light-gray hover:text-[#CDB4DB] transition-colors py-2"
                   >
                     <Mail size={20} />
-                    <span>Copy Email</span>
+                    <span>Email</span>
                   </button>
                   <button 
                     onClick={handleLinkedInClick}
