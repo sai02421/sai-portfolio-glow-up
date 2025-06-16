@@ -83,7 +83,7 @@ const WhatIDoSection = () => {
   ];
 
   return (
-    <section id="what-i-do" className="py-16 sm:py-20 bg-[#F5EFFF]">
+    <section id="what-i-do" className="py-16 sm:py-20 bg-white">
       <div className="container-max">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl font-display text-[#2F3E46] mb-4 sm:mb-6">What I Do</h2>

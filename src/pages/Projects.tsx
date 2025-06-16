@@ -30,14 +30,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <span className="text-4xl sm:text-6xl">{project.emoji}</span>
           </div>
           <div className="p-4 sm:p-6">
-            <h3 className="text-lg sm:text-xl font-fredoka text-navy-blue mb-3 group-hover:text-digital-lavender transition-colors">
+            <h3 className="text-lg sm:text-xl font-display text-navy-blue mb-3 group-hover:text-[#CDB4DB] transition-colors">
               {project.title}
             </h3>
-            <p className="text-dark-green mb-4 leading-relaxed font-source-sans text-sm sm:text-base">
+            <p className="text-dark-green mb-4 leading-relaxed font-body text-sm sm:text-base">
               {project.shortDescription}
             </p>
             <Button 
-              className="w-full btn-primary transition-all duration-300"
+              className="w-full bg-[#FCD5CE] hover:bg-[#F8AFA6] text-[#4B3F3F] px-4 py-2 rounded-md font-medium shadow-sm transition"
             >
               View Case Study
             </Button>
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </DialogTrigger>
       <DialogContent className="max-w-4xl bg-white border-gray-200 max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl sm:text-3xl font-fredoka flex items-center gap-3 text-navy-blue mb-4">
+          <DialogTitle className="text-2xl sm:text-3xl font-display flex items-center gap-3 text-navy-blue mb-4">
             <span className="text-3xl sm:text-4xl">{project.emoji}</span>
             {project.title}
           </DialogTitle>
@@ -61,33 +61,33 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
+                <h4 className="text-lg sm:text-xl font-display mb-3 text-[#CDB4DB]">
                   The Challenge
                 </h4>
-                <p className="text-dark-green leading-relaxed font-source-sans">{project.challenge}</p>
+                <p className="text-dark-green leading-relaxed font-body">{project.challenge}</p>
               </div>
               
               <div>
-                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
+                <h4 className="text-lg sm:text-xl font-display mb-3 text-[#CDB4DB]">
                   My Role
                 </h4>
-                <p className="text-dark-green leading-relaxed font-source-sans">{project.myRole}</p>
+                <p className="text-dark-green leading-relaxed font-body">{project.myRole}</p>
               </div>
             </div>
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
+                <h4 className="text-lg sm:text-xl font-display mb-3 text-[#CDB4DB]">
                   The Solution
                 </h4>
-                <p className="text-dark-green leading-relaxed font-source-sans">{project.approach}</p>
+                <p className="text-dark-green leading-relaxed font-body">{project.approach}</p>
               </div>
               
               <div>
-                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
+                <h4 className="text-lg sm:text-xl font-display mb-3 text-[#CDB4DB]">
                   The Impact
                 </h4>
-                <p className="text-dark-green leading-relaxed font-source-sans">{project.result}</p>
+                <p className="text-dark-green leading-relaxed font-body">{project.result}</p>
               </div>
             </div>
           </div>
@@ -146,8 +146,8 @@ const Projects = () => {
       <ModernHeader />
       <div className="container-max pt-24 sm:pt-32 pb-16 sm:pb-20">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="font-fredoka text-navy-blue mb-4 sm:mb-6">My Projects</h1>
-          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto font-source-sans">
+          <h1 className="text-3xl lg:text-4xl font-display text-navy-blue mb-4 sm:mb-6">My Projects</h1>
+          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto font-body">
             Real-world product management work with measurable outcomes and business impact.
           </p>
         </div>

@@ -11,8 +11,8 @@ const About = () => {
           {/* Left Column - Image */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative max-w-sm w-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-digital-lavender/20 to-navy-blue/20 rounded-2xl transform rotate-6 opacity-60"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/20 to-digital-lavender/20 rounded-2xl transform -rotate-3 opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#CDB4DB]/20 to-navy-blue/20 rounded-2xl transform rotate-6 opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/20 to-[#A3C4F3]/20 rounded-2xl transform -rotate-3 opacity-60"></div>
               <img 
                 src="/lovable-uploads/346bc2eb-ef46-44d5-af38-97b8fc9f1f02.png" 
                 alt="Sai Iyer - Product Manager"
@@ -24,44 +24,31 @@ const About = () => {
           {/* Right Column - Content */}
           <div className="space-y-6 lg:space-y-8">
             <div>
-              <h1 className="font-fredoka text-navy-blue mb-4 sm:mb-6 text-center lg:text-left">About Me</h1>
-              <div className="space-y-4 sm:space-y-6 text-dark-green font-source-sans">
+              <h1 className="text-3xl lg:text-4xl font-display text-navy-blue mb-4 sm:mb-6 text-center lg:text-left">About Me</h1>
+              <div className="space-y-4 sm:space-y-6 text-dark-green font-body">
                 <p className="text-base sm:text-lg leading-relaxed">
-                  I'm a Product Manager with a passion for building products that solve real problems and create meaningful impact. My journey started with curiosity about how technology can improve people's lives, and that curiosity continues to drive everything I do.
+                  Hey, I'm <span className="text-[#CDB4DB] font-bold">Sai</span> — a Product Manager with a builder's mindset and a user-first approach.
                 </p>
                 
                 <p className="text-base sm:text-lg leading-relaxed">
-                  Over the past few years, I've had the privilege of working with amazing teams to launch products that users love. From AI-powered chatbots that boost retention to e-commerce platforms that drive growth, I focus on combining data-driven insights with user empathy to create solutions that matter.
+                  My career started on the race track — literally — as part of a Formula Student team in college. But soon, I found myself more fascinated by user journeys than vehicle aerodynamics. That curiosity drove me into the world of digital products.
                 </p>
                 
                 <p className="text-base sm:text-lg leading-relaxed">
-                  When I'm not diving deep into user research or analyzing product metrics, you'll find me exploring the latest in AI and technology, always looking for new ways to enhance the user experience. I believe that great products are born from understanding both the problem and the people you're solving it for.
+                  Since then, I've built and launched products in ed-tech and D2C e-commerce, working across AI chatbots, retention systems, onboarding flows, and partner-facing dashboards. I enjoy the messy middle of product building — where insights, design, and strategy collide to create experiences that stick.
                 </p>
                 
                 <p className="text-base sm:text-lg leading-relaxed">
-                  I'm always excited to connect with fellow product enthusiasts, entrepreneurs, and anyone who shares a passion for building something meaningful. Let's create products that make a difference together.
+                  I love collaborating with cross-functional teams, diving into metrics, and iterating fast. Whether it's 0→1 MVPs or optimization experiments, I thrive when I'm solving real user problems that impact growth.
                 </p>
-              </div>
-            </div>
-
-            {/* Skills Section */}
-            <div className="pt-6 lg:pt-8 border-t border-dark-green/20">
-              <h3 className="font-fredoka text-navy-blue mb-4 sm:mb-6">Skills & Toolkit</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-                {[
-                  "Product Strategy", "User Research", "Data Analysis", 
-                  "A/B Testing", "Figma", "Jira", 
-                  "Mixpanel", "SQL", "AI/ML Product Development"
-                ].map((skill, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <span className="text-dark-green font-source-sans font-semibold text-sm sm:text-base">
-                      {skill}
-                    </span>
-                  </div>
-                ))}
+                
+                <p className="text-base sm:text-lg leading-relaxed">
+                  Outside of work, I enjoy playing pickleball, geeking out on mythology, and helping founders validate ideas and launch with speed.
+                </p>
+                
+                <p className="text-base sm:text-lg leading-relaxed font-semibold">
+                  Let's build something meaningful 🚀
+                </p>
               </div>
             </div>
           </div>

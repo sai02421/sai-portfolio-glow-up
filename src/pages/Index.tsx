@@ -3,6 +3,7 @@ import ModernHeader from "@/components/ModernHeader";
 import ModernHero from "@/components/ModernHero";
 import WhatIDoSection from "@/components/WhatIDoSection";
 import ExperienceJourney from "@/components/ExperienceJourney";
+import SkillsSection from "@/components/SkillsSection";
 import BlogsTeardowns from "@/components/BlogsTeardowns";
 import ModernFooter from "@/components/ModernFooter";
 
@@ -14,6 +15,7 @@ const Index = () => {
         <ModernHero />
         <WhatIDoSection />
         <ExperienceJourney />
+        <SkillsSection />
         <BlogsTeardowns />
       </main>
       <ModernFooter />
