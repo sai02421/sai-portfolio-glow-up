@@ -17,18 +17,18 @@ const CompetencyCard = ({
   outcomes: string;
 }) => {
   return (
-    <div className="section-card p-6 sm:p-8 group hover:scale-105 transition-all duration-300">
+    <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate-fade-in-up group">
       <div className="flex flex-col items-start">
         <div className={`mb-4 p-3 rounded-full ${color}`}>
           <Icon size={24} className="text-white" />
         </div>
-        <h3 className="text-lg sm:text-xl font-semibold mb-3 text-gray-900">
+        <h3 className="text-lg sm:text-xl font-fredoka text-navy-blue mb-3">
           {title}
         </h3>
-        <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm sm:text-base text-dark-green font-source-sans leading-relaxed mb-4">
           {description}
         </p>
-        <div className="text-xs sm:text-sm text-purple-600 font-medium">
+        <div className="text-xs sm:text-sm text-digital-lavender font-semibold font-source-sans">
           {outcomes}
         </div>
       </div>
@@ -83,11 +83,11 @@ const WhatIDoSection = () => {
   ];
 
   return (
-    <section id="what-i-do" className="py-16 sm:py-20 bg-white w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="what-i-do" className="py-16 sm:py-20 bg-white">
+      <div className="container-max">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">What I Do</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
+          <h2 className="font-fredoka text-navy-blue mb-4 sm:mb-6">What I Do</h2>
+          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto font-source-sans px-4 sm:px-0">
             I help founders and teams build products that users actually want. Here's how we work together to turn your idea into a thriving product.
           </p>
         </div>

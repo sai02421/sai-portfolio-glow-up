@@ -14,9 +14,9 @@ const ExperienceJourney = () => {
   ];
 
   return (
-    <section className="py-20 bg-earthen-luxe">
+    <section id="experience-journey" className="py-16 sm:py-20 bg-light-gray">
       <div className="container-max">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-fredoka text-navy-blue mb-4">
             My Experience Journey
           </h2>
@@ -25,22 +25,22 @@ const ExperienceJourney = () => {
         <div className="max-w-3xl mx-auto">
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-digital-lavender"></div>
+            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-digital-lavender"></div>
             
             {experiences.map((exp, index) => (
-              <div key={index} className="relative flex items-start space-x-8 pb-12 last:pb-0">
+              <div key={index} className="relative flex items-start space-x-6 sm:space-x-8 pb-12 last:pb-0">
                 {/* Timeline Dot */}
-                <div className="flex-shrink-0 w-4 h-4 bg-digital-lavender rounded-full border-4 border-earthen-luxe relative z-10"></div>
+                <div className="flex-shrink-0 w-4 h-4 bg-digital-lavender rounded-full border-4 border-light-gray relative z-10"></div>
                 
                 {/* Content */}
-                <div className="flex-1 bg-white rounded-2xl p-6 shadow-sm animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <h3 className="font-fredoka text-navy-blue mb-2">
+                <div className="flex-1 bg-white rounded-2xl p-4 sm:p-6 shadow-sm animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <h3 className="font-fredoka text-navy-blue mb-2 text-lg sm:text-xl">
                     {exp.company}
                   </h3>
                   <p className="caption text-digital-lavender mb-3 font-source-sans">
                     {exp.period}
                   </p>
-                  <p className="text-dark-green font-source-sans">
+                  <p className="text-dark-green font-source-sans text-sm sm:text-base leading-relaxed">
                     {exp.achievement}
                   </p>
                 </div>

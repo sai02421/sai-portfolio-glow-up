@@ -1,5 +1,6 @@
 
-import Navbar from "@/components/Navbar";
+import ModernHeader from "@/components/ModernHeader";
+import ModernFooter from "@/components/ModernFooter";
 import { Button } from "@/components/ui/button";
 import { 
   Dialog,
@@ -24,19 +25,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="section-card overflow-hidden cursor-pointer group hover:scale-105 transition-all duration-300">
+        <div className="bg-white rounded-2xl overflow-hidden cursor-pointer group hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
           <div className="h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
-            <span className="text-6xl">{project.emoji}</span>
+            <span className="text-4xl sm:text-6xl">{project.emoji}</span>
           </div>
-          <div className="p-6">
-            <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-fredoka text-navy-blue mb-3 group-hover:text-digital-lavender transition-colors">
               {project.title}
             </h3>
-            <p className="text-gray-600 mb-4 leading-relaxed">
+            <p className="text-dark-green mb-4 leading-relaxed font-source-sans text-sm sm:text-base">
               {project.shortDescription}
             </p>
             <Button 
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300"
+              className="w-full btn-primary transition-all duration-300"
             >
               View Case Study
             </Button>
@@ -45,8 +46,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </DialogTrigger>
       <DialogContent className="max-w-4xl bg-white border-gray-200 max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold flex items-center gap-3 text-gray-900 mb-4">
-            <span className="text-4xl">{project.emoji}</span>
+          <DialogTitle className="text-2xl sm:text-3xl font-fredoka flex items-center gap-3 text-navy-blue mb-4">
+            <span className="text-3xl sm:text-4xl">{project.emoji}</span>
             {project.title}
           </DialogTitle>
         </DialogHeader>
@@ -54,39 +55,39 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full h-64 object-cover rounded-lg"
+            className="w-full h-48 sm:h-64 object-cover rounded-lg"
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-6">
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-purple-600">
+                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
                   The Challenge
                 </h4>
-                <p className="text-gray-700 leading-relaxed">{project.challenge}</p>
+                <p className="text-dark-green leading-relaxed font-source-sans">{project.challenge}</p>
               </div>
               
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-purple-600">
+                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
                   My Role
                 </h4>
-                <p className="text-gray-700 leading-relaxed">{project.myRole}</p>
+                <p className="text-dark-green leading-relaxed font-source-sans">{project.myRole}</p>
               </div>
             </div>
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-purple-600">
+                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
                   The Solution
                 </h4>
-                <p className="text-gray-700 leading-relaxed">{project.approach}</p>
+                <p className="text-dark-green leading-relaxed font-source-sans">{project.approach}</p>
               </div>
               
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-purple-600">
+                <h4 className="text-lg sm:text-xl font-fredoka mb-3 text-digital-lavender">
                   The Impact
                 </h4>
-                <p className="text-gray-700 leading-relaxed">{project.result}</p>
+                <p className="text-dark-green leading-relaxed font-source-sans">{project.result}</p>
               </div>
             </div>
           </div>
@@ -141,22 +142,23 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <div className="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Projects & Case Studies</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <div className="min-h-screen bg-earthen-luxe page-transition">
+      <ModernHeader />
+      <div className="container-max pt-24 sm:pt-32 pb-16 sm:pb-20">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="font-fredoka text-navy-blue mb-4 sm:mb-6">My Projects</h1>
+          <p className="text-lg sm:text-xl text-dark-green max-w-3xl mx-auto font-source-sans">
             Real-world product management work with measurable outcomes and business impact.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>
+      <ModernFooter />
     </div>
   );
 };
