@@ -23,14 +23,14 @@ const ModernHero = () => {
               </div>
               
               <div className="space-y-2 lg:space-y-4">
-                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-[#2F3E46] leading-tight">
+                <h1 className="text-2xl lg:text-4xl xl:text-5xl font-display text-[#CDB4DB] leading-tight">
                   Product Manager, Builder & Creative Problem Solver
                 </h1>
               </div>
               
               <p className="text-base lg:text-lg text-dark-green max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">
                 I design digital experiences that feel effortless and perform brilliantly — blending{" "}
-                <span className="text-[#A3C4F3] font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
+                <span className="text-[#8B5CF6] font-bold">empathy</span>, experimentation, and just a little bit of controlled chaos.
               </p>
               
               <p className="text-dark-green/80 max-w-xl mx-auto lg:mx-0 font-body leading-relaxed">
@@ -62,7 +62,7 @@ const ModernHero = () => {
 
           {/* Right Image */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative max-w-xs sm:max-w-sm w-full">
+            <div className="relative max-w-xs sm:max-w-sm lg:max-w-md w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-[#CDB4DB]/20 to-navy-blue/20 rounded-2xl transform rotate-6 opacity-60"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/20 to-[#A3C4F3]/20 rounded-2xl transform -rotate-3 opacity-60"></div>
               <img 
