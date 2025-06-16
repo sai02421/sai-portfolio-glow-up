@@ -15,7 +15,7 @@ const ModernHero = () => {
       <div className="container-max w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1 mb-16 sm:mb-0">
             <div className="space-y-4 lg:space-y-6">
               <div className="inline-flex items-center space-x-2 bg-white/80 px-5 py-3 rounded-full border border-dark-green/10">
                 <span className="text-2xl lg:text-3xl">👋</span>
@@ -38,7 +38,7 @@ const ModernHero = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 sm:mb-0">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 className="bg-[#FCD5CE] hover:bg-[#F8AFA6] text-[#4B3F3F] rounded-lg px-4 py-2 font-medium shadow-sm transition group"
                 onClick={scrollToNextSection}
